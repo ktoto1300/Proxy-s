@@ -162,31 +162,12 @@ async def publish_proxy(bot, proxy_data, state, stats):
                 print(f"✅ Published: {ip}:{port} (Msg ID: {msg.message_id})")
                 stats["всего_отправлено"] += 1
                 
-                # Pinning logic with Lock to avoid race conditions causing multiple pins
+                # We record best ping for stats, but NO LONGER PIN IT here
                 if isinstance(ping, int):
-                    async with PIN_LOCK:
-                        best_ping = state.get("best_ping", 99999)
-                        if ping < best_ping:
-                            print(f"🏆 New best ping! {ping}ms is better than {best_ping}ms.")
-                            
-                            # Unpin old message
-                            old_pinned_id = state.get("pinned_message_id")
-                            if old_pinned_id:
-                                try:
-                                    await bot.unpin_chat_message(chat_id=GROUP_ID, message_id=old_pinned_id)
-                                    print(f"  📌 Unpinned old message: {old_pinned_id}")
-                                except Exception as e:
-                                    print(f"  ⚠️ Could not unpin old message {old_pinned_id}: {e}")
-                            
-                            # Pin new message
-                            try:
-                                await bot.pin_chat_message(chat_id=GROUP_ID, message_id=msg.message_id, disable_notification=True)
-                                print(f"  📌 Pinned new best proxy: {msg.message_id}")
-                                state["best_ping"] = ping
-                                state["pinned_message_id"] = msg.message_id
-                                stats["лучший_прокси"] = {"ip": ip, "port": port, "ping": ping, "protocol": protocol}
-                            except Exception as e:
-                                print(f"  ⚠️ Could not pin new message: {e}")
+                    best_ping = stats["лучший_прокси"].get("ping", 99999)
+                    if ping < best_ping:
+                        print(f"🏆 New best ping recorded for stats! {ping}ms is better than {best_ping}ms.")
+                        stats["лучший_прокси"] = {"ip": ip, "port": port, "ping": ping, "protocol": protocol, "secret": secret}
 
                 return msg.message_id
             except TelegramRetryAfter as e:
