@@ -22,7 +22,12 @@ CHANNELS = [
     "proxy_socks5", "proxy_socks", "proxy_mtp", "mtproto",
     "socks5_bot", "socks5list", "socks5_proxy", "mtproto_tg",
     "proxy_tg", "tg_proxy", "proxy_for_telegram", "free_proxy",
-    "proxymtproto_free", "proxy_free", "proxy_server", "proxy_list"
+    "proxymtproto_free", "proxy_free", "proxy_server", "proxy_list",
+    "TgProxies", "Proxy", "Vpn", "Best_MTProto", "MTProto_Proxy_Server",
+    "Proxy_MTProto_Telegram", "FreeMTProto", "MTProto_Free", "ProxyVIP",
+    "MTProto_VIP", "Telegram_Proxy", "Tg_Proxy_Bot", "FastProxy",
+    "SpeedProxy", "BestProxy", "TopProxy", "MTProtoProxy", "socks5",
+    "socks5_proxies", "Socks5_Proxy_List", "MTProto_Proxies_List"
 ]
 
 SENT_FILE = "sent_proxies.txt"
@@ -182,6 +187,38 @@ async def scrape_channel(bot, channel, sent_proxies, mtproto_regex, socks_regex)
         except Exception as e:
             print(f"⚠️ Error scraping {url}: {e}")
 
+RAW_URLS = [
+    "https://raw.githubusercontent.com/hookzof/socks5_list/master/tg/mtproto.json",
+    "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-mtproto.txt",
+    "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/mtproto.txt"
+]
+
+async def scrape_raw_url(bot, url, sent_proxies, mtproto_regex, socks_regex):
+    print(f"🔎 Scraping RAW URL: {url}...")
+    headers = {"User-Agent": "Mozilla/5.0"}
+    try:
+        async with aiohttp.ClientSession(headers=headers) as session:
+            async with session.get(url, timeout=10) as response:
+                if response.status != 200:
+                    return
+                text = await response.text()
+                
+                # Match direct proxy strings or full links
+                for match in mtproto_regex.finditer(text):
+                    ip, port, secret = match.group(1), match.group(2), match.group(3)
+                    proxy_id = f"mtproto|{ip}|{port}|{secret}"
+                    
+                    if proxy_id not in sent_proxies:
+                        ping = await check_mtproto(ip, int(port))
+                        if ping is not False:
+                            if await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "ping": ping}):
+                                save_sent_proxy(proxy_id)
+                                sent_proxies.add(proxy_id)
+                        sent_proxies.add(proxy_id)
+                        save_sent_proxy(proxy_id)
+    except Exception as e:
+        print(f"⚠️ Error scraping raw {url}: {e}")
+
 async def main():
     if not BOT_TOKEN or not GROUP_ID:
         print("❌ ERROR: TELEGRAM_BOT_TOKEN or TARGET_GROUP_ID is missing!")
@@ -193,15 +230,21 @@ async def main():
 
     bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
     
-    mtproto_regex = re.compile(r"proxy\?server=([a-zA-Z0-9.-]+)(?:&|&amp;)port=(\d+)(?:&|&amp;)secret=([a-zA-Z0-9._~%-]+)")
+    mtproto_regex = re.compile(r"server=([a-zA-Z0-9.-]+)(?:&|&amp;)port=(\d+)(?:&|&amp;)secret=([a-zA-Z0-9._~%-]+)")
     socks_regex = re.compile(r"socks\?server=([a-zA-Z0-9.-]+)(?:&|&amp;)port=(\d+)")
 
+    # Scrape channels
     for channel in CHANNELS:
         await scrape_channel(bot, channel, sent_proxies, mtproto_regex, socks_regex)
-        await asyncio.sleep(1) # Small delay to not get rate limited by mirrors
+        await asyncio.sleep(1)
+
+    # Scrape raw URLs
+    for url in RAW_URLS:
+        await scrape_raw_url(bot, url, sent_proxies, mtproto_regex, socks_regex)
+        await asyncio.sleep(1)
 
     await bot.session.close()
-    print("🏁 Finished scraping all channels.")
+    print("🏁 Finished scraping all channels and URLs.")
 
 if __name__ == "__main__":
     asyncio.run(main())
