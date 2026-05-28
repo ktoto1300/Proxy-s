@@ -307,14 +307,17 @@ async def main():
     mtproto_regex = re.compile(r"server=([a-zA-Z0-9.-]+)(?:&|&amp;)port=(\d+)(?:&|&amp;)secret=([a-zA-Z0-9._~%-]+)")
     socks_regex = re.compile(r"socks\?server=([a-zA-Z0-9.-]+)(?:&|&amp;)port=(\d+)")
 
-    # 2. Scrape new proxies
-    for channel in CHANNELS:
-        await scrape_channel(bot, channel, state, mtproto_regex, socks_regex)
-        await asyncio.sleep(1)
+    # 2. Scrape new proxies (Concurrently in batches to speed up)
+    batch_size = 10
+    
+    for i in range(0, len(CHANNELS), batch_size):
+        batch = CHANNELS[i:i + batch_size]
+        tasks = [scrape_channel(bot, channel, state, mtproto_regex, socks_regex) for channel in batch]
+        await asyncio.gather(*tasks)
+        await asyncio.sleep(1) # Small pause between batches
 
     for url in RAW_URLS:
         await scrape_raw_url(bot, url, state, mtproto_regex, socks_regex)
-        await asyncio.sleep(1)
 
     await bot.session.close()
     print("🏁 Finished all tasks.")
