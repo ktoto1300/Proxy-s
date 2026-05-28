@@ -1,0 +1,13 @@
+{
+  "total_proxies_found": 28,
+  "total_proxies_sent": 1,
+  "total_proxies_deleted": 28,
+  "total_active_currently": 33,
+  "best_proxy": {
+    "ip": "r16.proxytg.space",
+    "port": "8443",
+    "ping": 336,
+    "protocol": "mtproto"
+  },
+  "last_run_time": "2026-05-28 19:26:23 UTC"
+}
