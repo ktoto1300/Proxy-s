@@ -41,44 +41,34 @@ RAW_URLS = [
 
 STATE_FILE = "sent_proxies.json"
 STATS_FILE = "stats.json"
-PIN_LOCK = None
 
 def load_state():
-    if not os.path.exists(STATE_FILE):
-        return {}
+    if not os.path.exists(STATE_FILE): return {}
     try:
-        with open(STATE_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except:
-        return {}
+        with open(STATE_FILE, "r", encoding="utf-8") as f: return json.load(f)
+    except: return {}
 
 def save_state(state):
-    with open(STATE_FILE, "w", encoding="utf-8") as f:
-        json.dump(state, f, indent=2)
+    with open(STATE_FILE, "w", encoding="utf-8") as f: json.dump(state, f, indent=2)
 
 def load_stats():
     default_stats = {
         "всего_найдено": 0,
         "всего_отправлено": 0,
         "всего_удалено": 0,
-        "сейчас_активно": 0,
-        "лучший_прокси": {"ip": "Нет", "port": 0, "ping": 99999, "protocol": "Нет"},
-        "последний_запуск": ""
+        "лучший_прокси": {"ip": "Нет", "port": 0, "ping": 99999, "protocol": "Нет"}
     }
-    if not os.path.exists(STATS_FILE):
-        return default_stats
+    if not os.path.exists(STATS_FILE): return default_stats
     try:
         with open(STATS_FILE, "r", encoding="utf-8") as f:
             stats = json.load(f)
             for k, v in default_stats.items():
                 if k not in stats: stats[k] = v
             return stats
-    except:
-        return default_stats
+    except: return default_stats
 
 def save_stats(stats):
-    with open(STATS_FILE, "w", encoding="utf-8") as f:
-        json.dump(stats, f, indent=2, ensure_ascii=False)
+    with open(STATS_FILE, "w", encoding="utf-8") as f: json.dump(stats, f, indent=2, ensure_ascii=False)
 
 async def check_mtproto(ip, port):
     start_time = time.time()
@@ -87,265 +77,142 @@ async def check_mtproto(ip, port):
         writer.close()
         await writer.wait_closed()
         return int((time.time() - start_time) * 1000)
-    except:
-        return False
+    except: return False
 
 async def check_socks5(ip, port):
     start_time = time.time()
-    proxy_url = f"socks5://{ip}:{port}"
     try:
-        connector = ProxyConnector.from_url(proxy_url)
+        connector = ProxyConnector.from_url(f"socks5://{ip}:{port}")
         async with aiohttp.ClientSession(connector=connector) as session:
             async with session.get("https://api.telegram.org/bot/getMe", timeout=5) as resp:
-                if resp.status in [200, 401, 404]:
-                    return int((time.time() - start_time) * 1000)
-    except:
-        pass
+                if resp.status in [200, 401, 404]: return int((time.time() - start_time) * 1000)
+    except: pass
     return False
 
-async def get_country(ip):
-    try:
-        async with aiohttp.ClientSession() as session:
-            async with session.get(f"http://ip-api.com/json/{ip}", timeout=3) as resp:
-                data = await resp.json()
-                return data.get("country", "Unknown"), data.get("countryCode", "🌐")
-    except:
-        return "Unknown", "🌐"
-
-async def publish_proxy(bot, proxy_data, state, stats):
-    ip = proxy_data["ip"]
-    port = proxy_data["port"]
-    protocol = proxy_data["protocol"]
-    secret = proxy_data.get("secret", "")
-    ping = proxy_data.get("ping", "Unknown")
-    
-    country, country_code = await get_country(ip)
+async def publish_proxy(bot, proxy_data, state, stats, session_stats):
+    ip, port, protocol, secret, ping = proxy_data["ip"], proxy_data["port"], proxy_data["protocol"], proxy_data.get("secret", ""), proxy_data.get("ping", "Unknown")
     
     if protocol == "mtproto":
         link = f"https://t.me/proxy?server={ip}&port={port}&secret={secret}"
-        share_link = f"https://t.me/share/url?url={link}"
-        text = (
-            f"🔐 <b>MTProto Proxy</b>\n"
-            f"━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"🖥  <b>Server</b> :  <code>{ip}</code>\n"
-            f"🔌  <b>Port</b> :  <code>{port}</code>\n"
-            f"🔑  <b>Secret</b> :  <code>{secret}</code>\n"
-            f"⚡️  <b>Ping</b> :  <code>{ping} ms</code>\n"
-            f"📍  <b>Country</b> :  {country} {country_code}\n\n"
-            f"━━━━━━━━━━━━━━━━━━━━"
-        )
+        text = f"🔐 MTProto Proxy\n━━━━━━━━━━━━━━━━━━━━\n\n🖥  Server :  {ip}\n🔌  Port :  {port}\n🔑  Secret :  {secret}\n⚡️  Ping :  {ping} ms\n\n━━━━━━━━━━━━━━━━━━━━"
         builder = InlineKeyboardBuilder()
         builder.row(types.InlineKeyboardButton(text="✅ Подключить", url=link))
-        builder.row(types.InlineKeyboardButton(text="🚀 Поделиться", url=share_link))
+        builder.row(types.InlineKeyboardButton(text="🚀 Поделиться", url=f"https://t.me/share/url?url={link}"))
         reply_markup = builder.as_markup()
     else:
-        link = f"tg://socks?server={ip}&port={port}"
-        text = (
-            f"🌐 <b>SOCKS5 Proxy</b>\n"
-            f"<code>{ip}:{port}</code>\n"
-            f"⚡️ <b>Ping:</b> {ping}ms | 📍 {country} {country_code}"
-        )
+        text = f"🌐 SOCKS5 Proxy\n{ip}:{port}\nPing: {ping}ms"
         builder = InlineKeyboardBuilder()
-        builder.row(types.InlineKeyboardButton(text="✅ Connect", url=link))
+        builder.row(types.InlineKeyboardButton(text="✅ Connect", url=f"tg://socks?server={ip}&port={port}"))
         reply_markup = builder.as_markup()
 
-    async def _send_with_retry(retries=2):
-        for _ in range(retries):
-            try:
-                msg = await bot.send_message(
-                    chat_id=GROUP_ID, 
-                    text=text, 
-                    reply_markup=reply_markup,
-                    disable_web_page_preview=True
-                )
-                print(f"✅ Published: {ip}:{port} (Msg ID: {msg.message_id})")
-                stats["всего_отправлено"] += 1
-                
-                if isinstance(ping, int):
-                    best_ping = stats["лучший_прокси"].get("ping", 99999)
-                    if ping < best_ping:
-                        stats["лучший_прокси"] = {"ip": ip, "port": port, "ping": ping, "protocol": protocol, "secret": secret}
-
-                return msg.message_id
-            except TelegramRetryAfter as e:
-                print(f"⚠️ Flood control exceeded. Sleeping for {e.retry_after} seconds...")
-                await asyncio.sleep(e.retry_after)
-            except Exception as e:
-                print(f"❌ Failed to publish {ip}:{port}: {e}")
-                return None
+    try:
+        msg = await bot.send_message(chat_id=GROUP_ID, text=text, reply_markup=reply_markup, disable_web_page_preview=True, parse_mode=None)
+        print(f"✅ Sent: {ip}:{port}")
+        stats["всего_отправлено"] += 1
+        session_stats["sent_this_run"] += 1
+        
+        if isinstance(ping, int) and ping < stats["лучший_прокси"].get("ping", 99999):
+            stats["лучший_прокси"] = {"ip": ip, "port": port, "ping": ping, "protocol": protocol, "secret": secret}
+        
+        return msg.message_id
+    except TelegramRetryAfter as e:
+        print(f"⚠️ Flood control! Sleeping {e.retry_after}s")
+        await asyncio.sleep(e.retry_after)
+        return await publish_proxy(bot, proxy_data, state, stats, session_stats)
+    except Exception as e:
+        print(f"❌ Publish error: {e}")
         return None
 
-    return await _send_with_retry()
-
 async def cleanup_dead_proxies(bot, state, stats):
-    print("🧹 Starting Auto-Cleanup...")
-    proxies_to_remove = []
-    items_to_check = [item for item in list(state.items()) if isinstance(item[1], dict)][:50]
-    
-    for proxy_id, proxy_info in items_to_check:
-        ip, port, protocol, message_id = proxy_info["ip"], int(proxy_info["port"]), proxy_info["protocol"], proxy_info["message_id"]
-        
-        is_alive = await check_mtproto(ip, port) if protocol == "mtproto" else await check_socks5(ip, port)
-            
-        if is_alive is False:
-            print(f"💀 Dead Proxy Detected: {ip}:{port}.")
-            if message_id != 0:
-                try:
-                    await bot.delete_message(chat_id=GROUP_ID, message_id=message_id)
-                except: pass
-            proxies_to_remove.append(proxy_id)
+    print("🧹 Cleaning...")
+    to_remove = []
+    items = [it for it in list(state.items()) if isinstance(it[1], dict) and it[1].get("message_id", 0) != 0][:50]
+    for pid, info in items:
+        alive = await check_mtproto(info["ip"], int(info["port"])) if info["protocol"] == "mtproto" else await check_socks5(info["ip"], int(info["port"]))
+        if alive is False:
+            try: await bot.delete_message(chat_id=GROUP_ID, message_id=info["message_id"])
+            except: pass
+            to_remove.append(pid)
             await asyncio.sleep(0.5)
-            
-    for pid in proxies_to_remove:
+    for pid in to_remove:
         if pid in state: del state[pid]
-            
-    if proxies_to_remove:
-        save_state(state)
-        stats["всего_удалено"] += len(proxies_to_remove)
+    stats["всего_удалено"] += len(to_remove)
+    save_state(state)
 
-async def scrape_channel(bot, channel, state, stats, mtproto_regex, socks_regex):
-    print(f"🔎 Scraping: {channel}...")
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36"}
-    sources = [f"https://t.me/s/{channel}", f"https://telemetr.io/en/channels/{channel}/posts", f"https://tgstat.ru/channel/@{channel}"]
-    
-    for url in sources:
+async def scrape_channel(bot, channel, state, stats, session_stats, mtproto_regex, socks_regex):
+    print(f"🔎 Scrape: {channel}")
+    headers = {"User-Agent": "Mozilla/5.0"}
+    urls = [f"https://t.me/s/{channel}", f"https://telemetr.io/en/channels/{channel}/posts"]
+    for url in urls:
         try:
-            async with aiohttp.ClientSession(headers=headers) as session:
-                async with session.get(url, timeout=10) as response:
-                    if response.status != 200: continue
-                    text = await response.text()
-                    found = False
-                    for match in mtproto_regex.finditer(text):
-                        ip, port, secret = match.group(1), match.group(2), match.group(3)
-                        proxy_id = f"mtproto|{ip}|{port}|{secret}"
-                        if proxy_id not in state:
+            async with aiohttp.ClientSession(headers=headers) as s:
+                async with s.get(url, timeout=10) as r:
+                    if r.status != 200: continue
+                    text = await r.text()
+                    for m in mtproto_regex.finditer(text):
+                        ip, port, secret = m.group(1), m.group(2), m.group(3)
+                        pid = f"mtproto|{ip}|{port}|{secret}"
+                        if pid not in state:
                             stats["всего_найдено"] += 1
-                            print(f"🧪 Testing MTProto: {ip}:{port}...")
                             ping = await check_mtproto(ip, int(port))
                             if ping is not False:
-                                message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "ping": ping}, state, stats)
-                                if message_id:
-                                    state[proxy_id] = {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "message_id": message_id}
-                                    save_state(state)
-                            else:
-                                state[proxy_id] = {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "message_id": 0}
-                                save_state(state)
-                            found = True
-                    for match in socks_regex.finditer(text):
-                        ip, port = match.group(1), match.group(2)
-                        proxy_id = f"socks5|{ip}|{port}"
-                        if proxy_id not in state:
+                                mid = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "ping": ping}, state, stats, session_stats)
+                                if mid: state[pid] = {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "message_id": mid}
+                            else: state[pid] = {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "message_id": 0}
+                            save_state(state)
+                    for m in socks_regex.finditer(text):
+                        ip, port = m.group(1), m.group(2)
+                        pid = f"socks5|{ip}|{port}"
+                        if pid not in state:
                             stats["всего_найдено"] += 1
-                            print(f"🧪 Testing SOCKS5: {ip}:{port}...")
                             ping = await check_socks5(ip, int(port))
                             if ping is not False:
-                                message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "socks5", "ping": ping}, state, stats)
-                                if message_id:
-                                    state[proxy_id] = {"ip": ip, "port": port, "protocol": "socks5", "message_id": message_id}
-                                    save_state(state)
-                            else:
-                                state[proxy_id] = {"ip": ip, "port": port, "protocol": "socks5", "message_id": 0}
-                                save_state(state)
-                            found = True
-                    if found: return
+                                mid = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "socks5", "ping": ping}, state, stats, session_stats)
+                                if mid: state[pid] = {"ip": ip, "port": port, "protocol": "socks5", "message_id": mid}
+                            else: state[pid] = {"ip": ip, "port": port, "protocol": "socks5", "message_id": 0}
+                            save_state(state)
         except: pass
 
-async def scrape_raw_url(bot, url, state, stats, mtproto_regex, socks_regex):
-    print(f"🔎 Scraping RAW URL: {url}...")
-    try:
-        async with aiohttp.ClientSession(headers={"User-Agent": "Mozilla/5.0"}) as session:
-            async with session.get(url, timeout=10) as response:
-                if response.status != 200: return
-                text = await response.text()
-                for match in mtproto_regex.finditer(text):
-                    ip, port, secret = match.group(1), match.group(2), match.group(3)
-                    proxy_id = f"mtproto|{ip}|{port}|{secret}"
-                    if proxy_id not in state:
-                        stats["всего_найдено"] += 1
-                        ping = await check_mtproto(ip, int(port))
-                        if ping is not False:
-                            message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "ping": ping}, state, stats)
-                            if message_id:
-                                state[proxy_id] = {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "message_id": message_id}
-                                save_state(state)
-                        else:
-                            state[proxy_id] = {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "message_id": 0}
-                            save_state(state)
-    except: pass
-
-async def publish_stats(bot, state, stats):
-    # Update timestamp to MSK BEFORE publishing
-    msk_time = datetime.now(timezone.utc) + timedelta(hours=3)
-    current_time_str = msk_time.strftime("%Y-%m-%d %H:%M:%S МСК")
-    stats["последний_запуск"] = current_time_str
-
+async def publish_stats(bot, state, stats, session_stats):
+    now = (datetime.now(timezone.utc) + timedelta(hours=3)).strftime("%Y-%m-%d %H:%M:%S МСК")
     best = stats.get("лучший_прокси", {})
-    best_ip, best_port, best_ping, best_secret = best.get("ip", "Нет"), best.get("port", 0), best.get("ping", "Нет"), best.get("secret", "")
-    best_protocol = str(best.get("protocol", "Нет")).upper()
+    text = f"📊 Статистика\n━━━━━━━━━━━━━━━━━━━━\n\n🔍 Всего найдено: {stats['всего_найдено']}\n📥 Отправлено в канал: {session_stats['sent_this_run']}\n🗑 Удалено мёртвых: {stats['всего_удалено']}\n🟢 Сейчас активно в канале: {len([p for p in state.values() if isinstance(p, dict) and p.get('message_id', 0) != 0])}\n\n⏱️ Последнее сканирование:\n{now}\n\n🏆 Лучший прокси:\n├ Протокол: {str(best.get('protocol','Нет')).upper()}\n├ IP:Port: {best.get('ip','Нет')}:{best.get('port',0)}\n└ Пинг: {best.get('ping','Нет')} ms ⚡️\n\n━━━━━━━━━━━━━━━━━━━━"
     
-    text = (
-        f"📊 Статистика \n"
-        f"━━━━━━━━━━━━━━━━━━━━\n\n"
-        f"🔍 Всего найдено: {stats.get('всего_найдено', 0)}\n"
-        f"📥 Отправлено в канал: {stats.get('всего_отправлено', 0)}\n"
-        f"🗑 Удалено мёртвых: {stats.get('всего_удалено', 0)}\n"
-        f"🟢 Сейчас активно в канале: {stats.get('сейчас_активно', 0)}\n\n"
-        f"⏱️ Последнее сканирование:\n"
-        f"{current_time_str}\n\n"
-        f"🏆 Лучший прокси:\n"
-        f"├ Протокол: {best_protocol}\n"
-        f"├ IP:Port: {best_ip}:{best_port}\n"
-        f"└ Пинг: {best_ping} ms ⚡️\n\n"
-        f"━━━━━━━━━━━━━━━━━━━━"
-    )
+    kb = InlineKeyboardBuilder()
+    if best.get("ip") != "Нет":
+        link = f"https://t.me/proxy?server={best['ip']}&port={best['port']}&secret={best['secret']}" if best['protocol'] == "mtproto" else f"tg://socks?server={best['ip']}&port={best['port']}"
+        kb.row(types.InlineKeyboardButton(text="✅ Подключить", url=link))
     
-    reply_markup = None
-    if best_ip != "Нет":
-        link = f"https://t.me/proxy?server={best_ip}&port={best_port}&secret={best_secret}" if best_protocol == "MTPROTO" else f"tg://socks?server={best_ip}&port={best_port}"
-        builder = InlineKeyboardBuilder()
-        builder.row(types.InlineKeyboardButton(text="✅ Подключить", url=link))
-        reply_markup = builder.as_markup()
-
     try:
-        # Send as plain text (parse_mode=None) to match the user's exact requested look
-        msg = await bot.send_message(chat_id=GROUP_ID, text=text, reply_markup=reply_markup, disable_web_page_preview=True, parse_mode=None)
-        
-        # Handle pinning and unpinning
-        old_stats_id = state.get("stats_message_id")
-        if old_stats_id:
+        msg = await bot.send_message(chat_id=GROUP_ID, text=text, reply_markup=kb.as_markup(), parse_mode=None)
+        if state.get("stats_message_id"):
             try:
-                await bot.unpin_chat_message(chat_id=GROUP_ID, message_id=old_stats_id)
-                await bot.delete_message(chat_id=GROUP_ID, message_id=old_stats_id)
+                await bot.unpin_chat_message(chat_id=GROUP_ID, message_id=state["stats_message_id"])
+                await bot.delete_message(chat_id=GROUP_ID, message_id=state["stats_message_id"])
             except: pass
         await bot.pin_chat_message(chat_id=GROUP_ID, message_id=msg.message_id, disable_notification=True)
         state["stats_message_id"] = msg.message_id
         save_state(state)
-    except Exception as e: print(f"❌ Stats error: {e}")
+    except: pass
 
 async def main():
-    global PIN_LOCK
-    PIN_LOCK = asyncio.Lock()
     if not BOT_TOKEN or not GROUP_ID: return
-
     state, stats = load_state(), load_stats()
-    bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
+    session_stats = {"sent_this_run": 0}
+    bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode=None))
     
     await cleanup_dead_proxies(bot, state, stats)
     
-    mtproto_regex = re.compile(r"server=([a-zA-Z0-9.-]+)(?:&|&amp;)port=(\d+)(?:&|&amp;)secret=([a-zA-Z0-9._~%-]+)")
-    socks_regex = re.compile(r"socks\?server=([a-zA-Z0-9.-]+)(?:&|&amp;)port=(\d+)")
+    mt_re = re.compile(r"server=([a-zA-Z0-9.-]+)(?:&|&amp;)port=(\d+)(?:&|&amp;)secret=([a-zA-Z0-9._~%-]+)")
+    sk_re = re.compile(r"socks\?server=([a-zA-Z0-9.-]+)(?:&|&amp;)port=(\d+)")
 
     batch_size = 10
     for i in range(0, len(CHANNELS), batch_size):
-        await asyncio.gather(*[scrape_channel(bot, ch, state, stats, mtproto_regex, socks_regex) for ch in CHANNELS[i:i + batch_size]])
+        await asyncio.gather(*[scrape_channel(bot, ch, state, stats, session_stats, mt_re, sk_re) for ch in CHANNELS[i:i + batch_size]])
         await asyncio.sleep(1)
 
-    for url in RAW_URLS: await scrape_raw_url(bot, url, state, stats, mtproto_regex, socks_regex)
-
-    stats["сейчас_активно"] = len([p for p in state.values() if isinstance(p, dict) and p.get("message_id", 0) != 0])
-    await publish_stats(bot, state, stats)
+    await publish_stats(bot, state, stats, session_stats)
     await bot.session.close()
     save_stats(stats)
 
-if __name__ == "__main__":
-    asyncio.run(main())
+if __name__ == "__main__": asyncio.run(main())
