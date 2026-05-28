@@ -85,7 +85,7 @@ async def get_country(ip):
     except:
         return "Unknown", "🌐"
 
-async def publish_proxy(bot, proxy_data):
+async def publish_proxy(bot, proxy_data, state):
     ip = proxy_data["ip"]
     port = proxy_data["port"]
     protocol = proxy_data["protocol"]
@@ -130,6 +130,31 @@ async def publish_proxy(bot, proxy_data):
             disable_web_page_preview=True
         )
         print(f"✅ Published: {ip}:{port} (Msg ID: {msg.message_id})")
+        
+        # Pinning logic
+        if isinstance(ping, int):
+            best_ping = state.get("best_ping", 99999)
+            if ping < best_ping:
+                print(f"🏆 New best ping! {ping}ms is better than {best_ping}ms.")
+                
+                # Unpin old message
+                old_pinned_id = state.get("pinned_message_id")
+                if old_pinned_id:
+                    try:
+                        await bot.unpin_chat_message(chat_id=GROUP_ID, message_id=old_pinned_id)
+                        print(f"  📌 Unpinned old message: {old_pinned_id}")
+                    except Exception as e:
+                        print(f"  ⚠️ Could not unpin old message {old_pinned_id}: {e}")
+                
+                # Pin new message
+                try:
+                    await bot.pin_chat_message(chat_id=GROUP_ID, message_id=msg.message_id, disable_notification=True)
+                    print(f"  📌 Pinned new best proxy: {msg.message_id}")
+                    state["best_ping"] = ping
+                    state["pinned_message_id"] = msg.message_id
+                except Exception as e:
+                    print(f"  ⚠️ Could not pin new message: {e}")
+
         return msg.message_id
     except TelegramRetryAfter as e:
         print(f"⚠️ Flood control exceeded. Sleeping for {e.retry_after} seconds...")
@@ -225,7 +250,7 @@ async def scrape_channel(bot, channel, state, mtproto_regex, socks_regex):
                             print(f"🧪 Testing MTProto: {ip}:{port}...")
                             ping = await check_mtproto(ip, int(port))
                             if ping is not False:
-                                message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "ping": ping})
+                                message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "ping": ping}, state)
                                 if message_id:
                                     state[proxy_id] = {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "message_id": message_id}
                                     save_state(state)
@@ -246,7 +271,7 @@ async def scrape_channel(bot, channel, state, mtproto_regex, socks_regex):
                             print(f"🧪 Testing SOCKS5: {ip}:{port}...")
                             ping = await check_socks5(ip, int(port))
                             if ping is not False:
-                                message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "socks5", "ping": ping})
+                                message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "socks5", "ping": ping}, state)
                                 if message_id:
                                     state[proxy_id] = {"ip": ip, "port": port, "protocol": "socks5", "message_id": message_id}
                                     save_state(state)
@@ -280,7 +305,7 @@ async def scrape_raw_url(bot, url, state, mtproto_regex, socks_regex):
                     if proxy_id not in state:
                         ping = await check_mtproto(ip, int(port))
                         if ping is not False:
-                            message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "ping": ping})
+                            message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "ping": ping}, state)
                             if message_id:
                                 state[proxy_id] = {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "message_id": message_id}
                                 save_state(state)
