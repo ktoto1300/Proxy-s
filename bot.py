@@ -3,11 +3,12 @@ import aiohttp
 import re
 import os
 import time
+import json
 from aiogram import Bot, types
 from aiogram.enums import ParseMode
 from aiogram.client.default import DefaultBotProperties
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-from aiogram.exceptions import TelegramRetryAfter
+from aiogram.exceptions import TelegramRetryAfter, TelegramBadRequest
 from aiohttp_socks import ProxyConnector
 
 # Environment variables from GitHub Secrets
@@ -31,20 +32,28 @@ CHANNELS = [
     "socks5_proxies", "Socks5_Proxy_List", "MTProto_Proxies_List"
 ]
 
-SENT_FILE = "sent_proxies.txt"
+RAW_URLS = [
+    "https://raw.githubusercontent.com/hookzof/socks5_list/master/tg/mtproto.json",
+    "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-mtproto.txt",
+    "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/mtproto.txt"
+]
 
-def load_sent_proxies():
-    if not os.path.exists(SENT_FILE):
-        return set()
-    with open(SENT_FILE, "r", encoding="utf-8") as f:
-        return set(line.strip() for line in f if line.strip())
+STATE_FILE = "sent_proxies.json"
 
-def save_sent_proxy(proxy_id):
-    with open(SENT_FILE, "a", encoding="utf-8") as f:
-        f.write(f"{proxy_id}\n")
+def load_state():
+    if not os.path.exists(STATE_FILE):
+        return {}
+    try:
+        with open(STATE_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except:
+        return {}
+
+def save_state(state):
+    with open(STATE_FILE, "w", encoding="utf-8") as f:
+        json.dump(state, f, indent=2)
 
 async def check_mtproto(ip, port):
-    """Attempt to check MTProto by pinging a known host through it."""
     start_time = time.time()
     try:
         reader, writer = await asyncio.wait_for(asyncio.open_connection(ip, port), timeout=3)
@@ -88,7 +97,6 @@ async def publish_proxy(bot, proxy_data):
     if protocol == "mtproto":
         link = f"https://t.me/proxy?server={ip}&port={port}&secret={secret}"
         share_link = f"https://t.me/share/url?url={link}"
-        
         text = (
             f"🔐 <b>MTProto Proxy</b>\n"
             f"━━━━━━━━━━━━━━━━━━━━\n\n"
@@ -99,7 +107,6 @@ async def publish_proxy(bot, proxy_data):
             f"📍  <b>Country</b> :  {country} {country_code}\n\n"
             f"━━━━━━━━━━━━━━━━━━━━"
         )
-        
         builder = InlineKeyboardBuilder()
         builder.row(types.InlineKeyboardButton(text="✅ Подключить", url=link))
         builder.row(types.InlineKeyboardButton(text="🚀 Поделиться", url=share_link))
@@ -116,39 +123,85 @@ async def publish_proxy(bot, proxy_data):
         reply_markup = builder.as_markup()
 
     try:
-        await bot.send_message(
+        msg = await bot.send_message(
             chat_id=GROUP_ID, 
             text=text, 
             reply_markup=reply_markup,
             disable_web_page_preview=True
         )
-        print(f"✅ Published: {ip}:{port} ({protocol})")
-        return True
+        print(f"✅ Published: {ip}:{port} (Msg ID: {msg.message_id})")
+        return msg.message_id
     except TelegramRetryAfter as e:
         print(f"⚠️ Flood control exceeded. Sleeping for {e.retry_after} seconds...")
         await asyncio.sleep(e.retry_after)
-        # Try one more time after sleeping
         try:
-            await bot.send_message(
+            msg = await bot.send_message(
                 chat_id=GROUP_ID, 
                 text=text, 
                 reply_markup=reply_markup,
                 disable_web_page_preview=True
             )
-            print(f"✅ Published after sleep: {ip}:{port} ({protocol})")
-            return True
+            print(f"✅ Published after sleep: {ip}:{port} (Msg ID: {msg.message_id})")
+            return msg.message_id
         except Exception as retry_e:
              print(f"❌ Failed to publish after sleep {ip}:{port}: {retry_e}")
-             return False
+             return None
     except Exception as e:
         print(f"❌ Failed to publish {ip}:{port}: {e}")
-        return False
+        return None
 
-async def scrape_channel(bot, channel, sent_proxies, mtproto_regex, socks_regex):
+async def cleanup_dead_proxies(bot, state):
+    print("🧹 Starting Auto-Cleanup: Checking previously published proxies...")
+    proxies_to_remove = []
+    
+    # We only check up to 50 proxies per run to avoid timeout on GitHub Actions
+    items_to_check = list(state.items())[:50]
+    
+    for proxy_id, proxy_info in items_to_check:
+        ip = proxy_info["ip"]
+        port = int(proxy_info["port"])
+        protocol = proxy_info["protocol"]
+        message_id = proxy_info["message_id"]
+        
+        is_alive = False
+        if protocol == "mtproto":
+            is_alive = await check_mtproto(ip, port)
+        elif protocol == "socks5":
+            is_alive = await check_socks5(ip, port)
+            
+        if is_alive is False:
+            print(f"💀 Dead Proxy Detected: {ip}:{port}. Deleting message {message_id}...")
+            try:
+                await bot.delete_message(chat_id=GROUP_ID, message_id=message_id)
+                print(f"  🗑️ Message {message_id} deleted successfully.")
+            except TelegramBadRequest as e:
+                if "message to delete not found" in str(e).lower():
+                    print(f"  ℹ️ Message {message_id} already deleted or missing.")
+                else:
+                    print(f"  ⚠️ Could not delete {message_id}: {e}")
+            except Exception as e:
+                print(f"  ⚠️ Could not delete {message_id}: {e}")
+            
+            proxies_to_remove.append(proxy_id)
+            await asyncio.sleep(0.5) # Prevent flood control during mass deletion
+        else:
+            print(f"  🟢 Still alive: {ip}:{port} ({is_alive}ms)")
+            
+    # Remove dead proxies from state so we don't check them again
+    for pid in proxies_to_remove:
+        if pid in state:
+            del state[pid]
+            
+    if proxies_to_remove:
+        save_state(state)
+        print(f"✅ Cleanup finished. Removed {len(proxies_to_remove)} dead proxies.")
+    else:
+        print("✅ Cleanup finished. All checked proxies are still alive.")
+
+async def scrape_channel(bot, channel, state, mtproto_regex, socks_regex):
     print(f"🔎 Scraping: {channel}...")
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36"}
     
-    # We are on GitHub Actions, no local blocks, so we can try direct mirrors
     sources = [
         f"https://t.me/s/{channel}",
         f"https://telemetr.io/en/channels/{channel}/posts",
@@ -168,35 +221,41 @@ async def scrape_channel(bot, channel, sent_proxies, mtproto_regex, socks_regex)
                         ip, port, secret = match.group(1), match.group(2), match.group(3)
                         proxy_id = f"mtproto|{ip}|{port}|{secret}"
                         
-                        if proxy_id not in sent_proxies:
+                        if proxy_id not in state:
                             print(f"🧪 Testing MTProto: {ip}:{port}...")
                             ping = await check_mtproto(ip, int(port))
                             if ping is not False:
-                                if await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "ping": ping}):
-                                    save_sent_proxy(proxy_id)
-                                    sent_proxies.add(proxy_id)
+                                message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "ping": ping})
+                                if message_id:
+                                    state[proxy_id] = {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "message_id": message_id}
+                                    save_state(state)
                             else:
                                 print(f"  🗑️ Dead MTProto: {ip}:{port}")
-                            # Add to sent anyway to avoid re-checking dead ones constantly in the same run
-                            sent_proxies.add(proxy_id)
-                            save_sent_proxy(proxy_id)
+                            
+                            if ping is False:
+                                # Mark as dead but without message_id so we don't try to send it again immediately
+                                state[proxy_id] = {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "message_id": 0}
+                                save_state(state)
                             found = True
 
                     for match in socks_regex.finditer(text):
                         ip, port = match.group(1), match.group(2)
                         proxy_id = f"socks5|{ip}|{port}"
                         
-                        if proxy_id not in sent_proxies:
+                        if proxy_id not in state:
                             print(f"🧪 Testing SOCKS5: {ip}:{port}...")
                             ping = await check_socks5(ip, int(port))
                             if ping is not False:
-                                if await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "socks5", "ping": ping}):
-                                    save_sent_proxy(proxy_id)
-                                    sent_proxies.add(proxy_id)
+                                message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "socks5", "ping": ping})
+                                if message_id:
+                                    state[proxy_id] = {"ip": ip, "port": port, "protocol": "socks5", "message_id": message_id}
+                                    save_state(state)
                             else:
                                 print(f"  🗑️ Dead SOCKS5: {ip}:{port}")
-                            sent_proxies.add(proxy_id)
-                            save_sent_proxy(proxy_id)
+                            
+                            if ping is False:
+                                state[proxy_id] = {"ip": ip, "port": port, "protocol": "socks5", "message_id": 0}
+                                save_state(state)
                             found = True
                     
                     if found:
@@ -204,13 +263,7 @@ async def scrape_channel(bot, channel, sent_proxies, mtproto_regex, socks_regex)
         except Exception as e:
             print(f"⚠️ Error scraping {url}: {e}")
 
-RAW_URLS = [
-    "https://raw.githubusercontent.com/hookzof/socks5_list/master/tg/mtproto.json",
-    "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-mtproto.txt",
-    "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/mtproto.txt"
-]
-
-async def scrape_raw_url(bot, url, sent_proxies, mtproto_regex, socks_regex):
+async def scrape_raw_url(bot, url, state, mtproto_regex, socks_regex):
     print(f"🔎 Scraping RAW URL: {url}...")
     headers = {"User-Agent": "Mozilla/5.0"}
     try:
@@ -220,19 +273,20 @@ async def scrape_raw_url(bot, url, sent_proxies, mtproto_regex, socks_regex):
                     return
                 text = await response.text()
                 
-                # Match direct proxy strings or full links
                 for match in mtproto_regex.finditer(text):
                     ip, port, secret = match.group(1), match.group(2), match.group(3)
                     proxy_id = f"mtproto|{ip}|{port}|{secret}"
                     
-                    if proxy_id not in sent_proxies:
+                    if proxy_id not in state:
                         ping = await check_mtproto(ip, int(port))
                         if ping is not False:
-                            if await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "ping": ping}):
-                                save_sent_proxy(proxy_id)
-                                sent_proxies.add(proxy_id)
-                        sent_proxies.add(proxy_id)
-                        save_sent_proxy(proxy_id)
+                            message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "ping": ping})
+                            if message_id:
+                                state[proxy_id] = {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "message_id": message_id}
+                                save_state(state)
+                        if ping is False:
+                            state[proxy_id] = {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "message_id": 0}
+                            save_state(state)
     except Exception as e:
         print(f"⚠️ Error scraping raw {url}: {e}")
 
@@ -242,26 +296,28 @@ async def main():
         return
 
     print("🚀 GitHub Actions Proxy Bot Started!")
-    sent_proxies = load_sent_proxies()
-    print(f"📦 Loaded {len(sent_proxies)} previously checked proxies.")
+    state = load_state()
+    print(f"📦 Loaded {len(state)} previously checked proxies.")
 
     bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
+    
+    # 1. Run the Auto-Cleaner First
+    await cleanup_dead_proxies(bot, state)
     
     mtproto_regex = re.compile(r"server=([a-zA-Z0-9.-]+)(?:&|&amp;)port=(\d+)(?:&|&amp;)secret=([a-zA-Z0-9._~%-]+)")
     socks_regex = re.compile(r"socks\?server=([a-zA-Z0-9.-]+)(?:&|&amp;)port=(\d+)")
 
-    # Scrape channels
+    # 2. Scrape new proxies
     for channel in CHANNELS:
-        await scrape_channel(bot, channel, sent_proxies, mtproto_regex, socks_regex)
+        await scrape_channel(bot, channel, state, mtproto_regex, socks_regex)
         await asyncio.sleep(1)
 
-    # Scrape raw URLs
     for url in RAW_URLS:
-        await scrape_raw_url(bot, url, sent_proxies, mtproto_regex, socks_regex)
+        await scrape_raw_url(bot, url, state, mtproto_regex, socks_regex)
         await asyncio.sleep(1)
 
     await bot.session.close()
-    print("🏁 Finished scraping all channels and URLs.")
+    print("🏁 Finished all tasks.")
 
 if __name__ == "__main__":
     asyncio.run(main())
