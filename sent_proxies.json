@@ -167,13 +167,6 @@
     "secret": "eec5963870566a7e0d9a04f5f792d9faf47232312e70726f787974672e7370616365",
     "message_id": 248
   },
-  "mtproto|russia.nolags.pw|443|dd04dbf1f1459ffbc5e646db206794163a": {
-    "ip": "russia.nolags.pw",
-    "port": 443,
-    "protocol": "mtproto",
-    "secret": "dd04dbf1f1459ffbc5e646db206794163a",
-    "message_id": 223
-  },
   "mtproto|proxymtproto.tproxy.rest|8443|ee79e7010200010007f0030386e24c3add626973636f7474692e79656b74616e65742e636f6d": {
     "ip": "proxymtproto.tproxy.rest",
     "port": 8443,
@@ -678,13 +671,6 @@
     "secret": "dd104462821249bd7ac519130220c25d09",
     "message_id": 0
   },
-  "mtproto|89.167.109.120|443|dd104462821249bd7ac519130220c25d09": {
-    "ip": "89.167.109.120",
-    "port": 443,
-    "protocol": "mtproto",
-    "secret": "dd104462821249bd7ac519130220c25d09",
-    "message_id": 258
-  },
   "mtproto|65.108.50.120|443|dd104462821249bd7ac519130220c25d09": {
     "ip": "65.108.50.120",
     "port": 443,
@@ -734,5 +720,19 @@
     "secret": "dd104462821249bd7ac519130220c25d09",
     "message_id": 255
   },
-  "stats_message_id": 261
+  "stats_message_id": 263,
+  "mtproto|russia.nolags.pw|443|dd04dbf1f1459ffbc5e646db206794163a": {
+    "ip": "russia.nolags.pw",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "dd04dbf1f1459ffbc5e646db206794163a",
+    "message_id": 0
+  },
+  "mtproto|89.167.109.120|443|dd104462821249bd7ac519130220c25d09": {
+    "ip": "89.167.109.120",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "message_id": 0
+  }
 }
