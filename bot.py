@@ -325,6 +325,74 @@ async def scrape_raw_url(bot, url, state, stats, mtproto_regex, socks_regex):
     except Exception as e:
         print(f"⚠️ Error scraping raw {url}: {e}")
 
+async def publish_stats(bot, state, stats):
+    """Publish and pin the statistics message."""
+    best = stats.get("лучший_прокси", {})
+    best_ip = best.get("ip", "Нет")
+    best_port = best.get("port", 0)
+    best_ping = best.get("ping", "Нет")
+    best_protocol = str(best.get("protocol", "Нет")).upper()
+    best_secret = best.get("secret", "")
+    
+    text = (
+        f"📊 <b>Статистика Proxy Scraper Bot</b>\n"
+        f"━━━━━━━━━━━━━━━━━━━━\n\n"
+        f"🔍 <b>Всего найдено:</b> <code>{stats.get('всего_найдено', 0)}</code>\n"
+        f"📥 <b>Отправлено в канал:</b> <code>{stats.get('всего_отправлено', 0)}</code>\n"
+        f"🗑 <b>Удалено (мёртвых):</b> <code>{stats.get('всего_удалено', 0)}</code>\n"
+        f"🟢 <b>Сейчас активно в канале:</b> <code>{stats.get('сейчас_активно', 0)}</code>\n\n"
+        f"⏱️ <b>Последнее сканирование:</b>\n"
+        f"<code>{stats.get('последний_запуск', 'Только что')}</code>\n\n"
+        f"🏆 <b>Лучший прокси:</b>\n"
+        f"├ <b>Протокол:</b> <code>{best_protocol}</code>\n"
+        f"├ <b>IP:Port:</b> <code>{best_ip}:{best_port}</code>\n"
+        f"└ <b>Пинг:</b> <code>{best_ping} ms</code> ⚡️\n\n"
+        f"━━━━━━━━━━━━━━━━━━━━"
+    )
+    
+    reply_markup = None
+    if best_ip != "Нет" and best_protocol == "MTPROTO":
+        link = f"https://t.me/proxy?server={best_ip}&port={best_port}&secret={best_secret}"
+        builder = InlineKeyboardBuilder()
+        builder.row(types.InlineKeyboardButton(text="✅ Подключить к лучшему", url=link))
+        reply_markup = builder.as_markup()
+    elif best_ip != "Нет" and best_protocol == "SOCKS5":
+        link = f"tg://socks?server={best_ip}&port={best_port}"
+        builder = InlineKeyboardBuilder()
+        builder.row(types.InlineKeyboardButton(text="✅ Подключить к лучшему", url=link))
+        reply_markup = builder.as_markup()
+
+    print("📤 Sending stats message...")
+    try:
+        msg = await bot.send_message(
+            chat_id=GROUP_ID,
+            text=text,
+            reply_markup=reply_markup,
+            disable_web_page_preview=True
+        )
+        print(f"✅ Stats published (Msg ID: {msg.message_id})")
+        
+        # Unpin old stats message
+        old_stats_id = state.get("stats_message_id")
+        if old_stats_id:
+            try:
+                await bot.unpin_chat_message(chat_id=GROUP_ID, message_id=old_stats_id)
+                # Also delete the old stats message to avoid clutter
+                await bot.delete_message(chat_id=GROUP_ID, message_id=old_stats_id)
+            except Exception as e:
+                print(f"  ⚠️ Could not unpin/delete old stats message {old_stats_id}: {e}")
+                
+        # Pin new stats message
+        try:
+            await bot.pin_chat_message(chat_id=GROUP_ID, message_id=msg.message_id, disable_notification=True)
+            state["stats_message_id"] = msg.message_id
+            print(f"  📌 Pinned new stats message.")
+        except Exception as e:
+            print(f"  ⚠️ Could not pin stats message: {e}")
+            
+    except Exception as e:
+        print(f"❌ Failed to publish stats: {e}")
+
 async def main():
     global PIN_LOCK
     PIN_LOCK = asyncio.Lock()
@@ -359,6 +427,9 @@ async def main():
 
     for url in RAW_URLS:
         await scrape_raw_url(bot, url, state, stats, mtproto_regex, socks_regex)
+
+    # 3. Publish and pin stats
+    await publish_stats(bot, state, stats)
 
     await bot.session.close()
     
