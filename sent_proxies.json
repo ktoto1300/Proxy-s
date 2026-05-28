@@ -104,20 +104,6 @@
     "secret": "ee4fb60224ec3ba77691889623ffd44dc8667265652e70726f70726f786965732e746f70",
     "message_id": 0
   },
-  "mtproto|hotmtpro.duckdns.org|443|7u-wXMxodyqALbbZW3bovVF3d3cuYW1hem9uLmNvbQ": {
-    "ip": "hotmtpro.duckdns.org",
-    "port": "443",
-    "protocol": "mtproto",
-    "secret": "7u-wXMxodyqALbbZW3bovVF3d3cuYW1hem9uLmNvbQ",
-    "message_id": 189
-  },
-  "mtproto|amorecoin.duckdns.org|443|7mYW_5fPLJzJxcvUupkA3pN3d3cuZ29vZ2xlLmNvbQ": {
-    "ip": "amorecoin.duckdns.org",
-    "port": "443",
-    "protocol": "mtproto",
-    "secret": "7mYW_5fPLJzJxcvUupkA3pN3d3cuZ29vZ2xlLmNvbQ",
-    "message_id": 190
-  },
   "mtproto|elevenproxy.pro|444|aa1234567890abcdef1234567890abcd": {
     "ip": "elevenproxy.pro",
     "port": "444",
@@ -727,7 +713,7 @@
     "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
     "message_id": 0
   },
-  "stats_message_id": 215,
+  "stats_message_id": 219,
   "mtproto|russia.nolags.pw|443|dd04dbf1f1459ffbc5e646db206794163a": {
     "ip": "russia.nolags.pw",
     "port": "443",
@@ -741,5 +727,19 @@
     "protocol": "mtproto",
     "secret": "ee843223f372ef32e718c5271b5580714c6d656469612e737465616d706f77657265642e636f6d",
     "message_id": 214
+  },
+  "mtproto|hotmtpro.duckdns.org|443|7u-wXMxodyqALbbZW3bovVF3d3cuYW1hem9uLmNvbQ": {
+    "ip": "hotmtpro.duckdns.org",
+    "port": "443",
+    "protocol": "mtproto",
+    "secret": "7u-wXMxodyqALbbZW3bovVF3d3cuYW1hem9uLmNvbQ",
+    "message_id": 1
+  },
+  "mtproto|amorecoin.duckdns.org|443|7mYW_5fPLJzJxcvUupkA3pN3d3cuZ29vZ2xlLmNvbQ": {
+    "ip": "amorecoin.duckdns.org",
+    "port": "443",
+    "protocol": "mtproto",
+    "secret": "7mYW_5fPLJzJxcvUupkA3pN3d3cuZ29vZ2xlLmNvbQ",
+    "message_id": 1
   }
 }
