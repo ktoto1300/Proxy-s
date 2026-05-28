@@ -77,7 +77,9 @@ def load_stats():
         return default_stats
 
 def save_stats(stats):
-    stats["последний_запуск"] = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+    from datetime import datetime, timedelta, timezone
+    msk_time = datetime.now(timezone.utc) + timedelta(hours=3)
+    stats["последний_запуск"] = msk_time.strftime("%Y-%m-%d %H:%M:%S МСК")
     with open(STATS_FILE, "w", encoding="utf-8") as f:
         json.dump(stats, f, indent=2, ensure_ascii=False)
 
