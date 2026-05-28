@@ -41,6 +41,7 @@ RAW_URLS = [
 
 STATE_FILE = "sent_proxies.json"
 STATS_FILE = "stats.json"
+PIN_LOCK = None
 
 def load_state():
     if not os.path.exists(STATE_FILE):
@@ -57,19 +58,18 @@ def save_state(state):
 
 def load_stats():
     default_stats = {
-        "total_proxies_found": 0,
-        "total_proxies_sent": 0,
-        "total_proxies_deleted": 0,
-        "total_active_currently": 0,
-        "best_proxy": {"ip": "None", "port": 0, "ping": 99999, "protocol": "None"},
-        "last_run_time": ""
+        "всего_найдено": 0,
+        "всего_отправлено": 0,
+        "всего_удалено": 0,
+        "сейчас_активно": 0,
+        "лучший_прокси": {"ip": "Нет", "port": 0, "ping": 99999, "protocol": "Нет"},
+        "последний_запуск": ""
     }
     if not os.path.exists(STATS_FILE):
         return default_stats
     try:
         with open(STATS_FILE, "r", encoding="utf-8") as f:
             stats = json.load(f)
-            # Ensure all keys exist
             for k, v in default_stats.items():
                 if k not in stats: stats[k] = v
             return stats
@@ -77,9 +77,9 @@ def load_stats():
         return default_stats
 
 def save_stats(stats):
-    stats["last_run_time"] = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+    stats["последний_запуск"] = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
     with open(STATS_FILE, "w", encoding="utf-8") as f:
-        json.dump(stats, f, indent=2)
+        json.dump(stats, f, indent=2, ensure_ascii=False)
 
 async def check_mtproto(ip, port):
     start_time = time.time()
@@ -160,32 +160,33 @@ async def publish_proxy(bot, proxy_data, state, stats):
                     disable_web_page_preview=True
                 )
                 print(f"✅ Published: {ip}:{port} (Msg ID: {msg.message_id})")
-                stats["total_proxies_sent"] += 1
+                stats["всего_отправлено"] += 1
                 
-                # Pinning logic
+                # Pinning logic with Lock to avoid race conditions causing multiple pins
                 if isinstance(ping, int):
-                    best_ping = state.get("best_ping", 99999)
-                    if ping < best_ping:
-                        print(f"🏆 New best ping! {ping}ms is better than {best_ping}ms.")
-                        
-                        # Unpin old message
-                        old_pinned_id = state.get("pinned_message_id")
-                        if old_pinned_id:
+                    async with PIN_LOCK:
+                        best_ping = state.get("best_ping", 99999)
+                        if ping < best_ping:
+                            print(f"🏆 New best ping! {ping}ms is better than {best_ping}ms.")
+                            
+                            # Unpin old message
+                            old_pinned_id = state.get("pinned_message_id")
+                            if old_pinned_id:
+                                try:
+                                    await bot.unpin_chat_message(chat_id=GROUP_ID, message_id=old_pinned_id)
+                                    print(f"  📌 Unpinned old message: {old_pinned_id}")
+                                except Exception as e:
+                                    print(f"  ⚠️ Could not unpin old message {old_pinned_id}: {e}")
+                            
+                            # Pin new message
                             try:
-                                await bot.unpin_chat_message(chat_id=GROUP_ID, message_id=old_pinned_id)
-                                print(f"  📌 Unpinned old message: {old_pinned_id}")
+                                await bot.pin_chat_message(chat_id=GROUP_ID, message_id=msg.message_id, disable_notification=True)
+                                print(f"  📌 Pinned new best proxy: {msg.message_id}")
+                                state["best_ping"] = ping
+                                state["pinned_message_id"] = msg.message_id
+                                stats["лучший_прокси"] = {"ip": ip, "port": port, "ping": ping, "protocol": protocol}
                             except Exception as e:
-                                print(f"  ⚠️ Could not unpin old message {old_pinned_id}: {e}")
-                        
-                        # Pin new message
-                        try:
-                            await bot.pin_chat_message(chat_id=GROUP_ID, message_id=msg.message_id, disable_notification=True)
-                            print(f"  📌 Pinned new best proxy: {msg.message_id}")
-                            state["best_ping"] = ping
-                            state["pinned_message_id"] = msg.message_id
-                            stats["best_proxy"] = {"ip": ip, "port": port, "ping": ping, "protocol": protocol}
-                        except Exception as e:
-                            print(f"  ⚠️ Could not pin new message: {e}")
+                                print(f"  ⚠️ Could not pin new message: {e}")
 
                 return msg.message_id
             except TelegramRetryAfter as e:
@@ -243,7 +244,7 @@ async def cleanup_dead_proxies(bot, state, stats):
             
     if proxies_to_remove:
         save_state(state)
-        stats["total_proxies_deleted"] += len(proxies_to_remove)
+        stats["всего_удалено"] += len(proxies_to_remove)
         print(f"✅ Cleanup finished. Removed {len(proxies_to_remove)} dead proxies.")
     else:
         print("✅ Cleanup finished. All checked proxies are still alive.")
@@ -272,7 +273,7 @@ async def scrape_channel(bot, channel, state, stats, mtproto_regex, socks_regex)
                         proxy_id = f"mtproto|{ip}|{port}|{secret}"
                         
                         if proxy_id not in state:
-                            stats["total_proxies_found"] += 1
+                            stats["всего_найдено"] += 1
                             print(f"🧪 Testing MTProto: {ip}:{port}...")
                             ping = await check_mtproto(ip, int(port))
                             if ping is not False:
@@ -294,7 +295,7 @@ async def scrape_channel(bot, channel, state, stats, mtproto_regex, socks_regex)
                         proxy_id = f"socks5|{ip}|{port}"
                         
                         if proxy_id not in state:
-                            stats["total_proxies_found"] += 1
+                            stats["всего_найдено"] += 1
                             print(f"🧪 Testing SOCKS5: {ip}:{port}...")
                             ping = await check_socks5(ip, int(port))
                             if ping is not False:
@@ -330,7 +331,7 @@ async def scrape_raw_url(bot, url, state, stats, mtproto_regex, socks_regex):
                     proxy_id = f"mtproto|{ip}|{port}|{secret}"
                     
                     if proxy_id not in state:
-                        stats["total_proxies_found"] += 1
+                        stats["всего_найдено"] += 1
                         ping = await check_mtproto(ip, int(port))
                         if ping is not False:
                             message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "ping": ping}, state, stats)
@@ -344,6 +345,9 @@ async def scrape_raw_url(bot, url, state, stats, mtproto_regex, socks_regex):
         print(f"⚠️ Error scraping raw {url}: {e}")
 
 async def main():
+    global PIN_LOCK
+    PIN_LOCK = asyncio.Lock()
+    
     if not BOT_TOKEN or not GROUP_ID:
         print("❌ ERROR: TELEGRAM_BOT_TOKEN or TARGET_GROUP_ID is missing!")
         return
@@ -353,7 +357,7 @@ async def main():
     stats = load_stats()
     print(f"📦 Loaded {len(state)} previously checked proxies.")
     
-    stats["total_active_currently"] = len([p for p in state.values() if isinstance(p, dict) and p.get("message_id", 0) != 0])
+    stats["сейчас_активно"] = len([p for p in state.values() if isinstance(p, dict) and p.get("message_id", 0) != 0])
 
     bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
     
@@ -380,7 +384,7 @@ async def main():
     # Save final stats
     save_stats(stats)
     print("🏁 Finished all tasks.")
-    print(f"📊 STATS: Found: {stats['total_proxies_found']} | Sent: {stats['total_proxies_sent']} | Deleted: {stats['total_proxies_deleted']} | Best Ping: {stats['best_proxy']['ping']}ms")
+    print(f"📊 СТАТИСТИКА: Найдено: {stats['всего_найдено']} | Отправлено: {stats['всего_отправлено']} | Удалено: {stats['всего_удалено']} | Лучший Пинг: {stats['лучший_прокси']['ping']}ms")
 
 if __name__ == "__main__":
     asyncio.run(main())
