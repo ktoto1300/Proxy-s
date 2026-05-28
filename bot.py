@@ -4,6 +4,7 @@ import re
 import os
 import time
 import json
+from datetime import datetime
 from aiogram import Bot, types
 from aiogram.enums import ParseMode
 from aiogram.client.default import DefaultBotProperties
@@ -39,6 +40,7 @@ RAW_URLS = [
 ]
 
 STATE_FILE = "sent_proxies.json"
+STATS_FILE = "stats.json"
 
 def load_state():
     if not os.path.exists(STATE_FILE):
@@ -52,6 +54,32 @@ def load_state():
 def save_state(state):
     with open(STATE_FILE, "w", encoding="utf-8") as f:
         json.dump(state, f, indent=2)
+
+def load_stats():
+    default_stats = {
+        "total_proxies_found": 0,
+        "total_proxies_sent": 0,
+        "total_proxies_deleted": 0,
+        "total_active_currently": 0,
+        "best_proxy": {"ip": "None", "port": 0, "ping": 99999, "protocol": "None"},
+        "last_run_time": ""
+    }
+    if not os.path.exists(STATS_FILE):
+        return default_stats
+    try:
+        with open(STATS_FILE, "r", encoding="utf-8") as f:
+            stats = json.load(f)
+            # Ensure all keys exist
+            for k, v in default_stats.items():
+                if k not in stats: stats[k] = v
+            return stats
+    except:
+        return default_stats
+
+def save_stats(stats):
+    stats["last_run_time"] = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+    with open(STATS_FILE, "w", encoding="utf-8") as f:
+        json.dump(stats, f, indent=2)
 
 async def check_mtproto(ip, port):
     start_time = time.time()
@@ -85,7 +113,7 @@ async def get_country(ip):
     except:
         return "Unknown", "🌐"
 
-async def publish_proxy(bot, proxy_data, state):
+async def publish_proxy(bot, proxy_data, state, stats):
     ip = proxy_data["ip"]
     port = proxy_data["port"]
     protocol = proxy_data["protocol"]
@@ -122,65 +150,60 @@ async def publish_proxy(bot, proxy_data, state):
         builder.row(types.InlineKeyboardButton(text="✅ Connect", url=link))
         reply_markup = builder.as_markup()
 
-    try:
-        msg = await bot.send_message(
-            chat_id=GROUP_ID, 
-            text=text, 
-            reply_markup=reply_markup,
-            disable_web_page_preview=True
-        )
-        print(f"✅ Published: {ip}:{port} (Msg ID: {msg.message_id})")
-        
-        # Pinning logic
-        if isinstance(ping, int):
-            best_ping = state.get("best_ping", 99999)
-            if ping < best_ping:
-                print(f"🏆 New best ping! {ping}ms is better than {best_ping}ms.")
+    async def _send_with_retry(retries=2):
+        for _ in range(retries):
+            try:
+                msg = await bot.send_message(
+                    chat_id=GROUP_ID, 
+                    text=text, 
+                    reply_markup=reply_markup,
+                    disable_web_page_preview=True
+                )
+                print(f"✅ Published: {ip}:{port} (Msg ID: {msg.message_id})")
+                stats["total_proxies_sent"] += 1
                 
-                # Unpin old message
-                old_pinned_id = state.get("pinned_message_id")
-                if old_pinned_id:
-                    try:
-                        await bot.unpin_chat_message(chat_id=GROUP_ID, message_id=old_pinned_id)
-                        print(f"  📌 Unpinned old message: {old_pinned_id}")
-                    except Exception as e:
-                        print(f"  ⚠️ Could not unpin old message {old_pinned_id}: {e}")
-                
-                # Pin new message
-                try:
-                    await bot.pin_chat_message(chat_id=GROUP_ID, message_id=msg.message_id, disable_notification=True)
-                    print(f"  📌 Pinned new best proxy: {msg.message_id}")
-                    state["best_ping"] = ping
-                    state["pinned_message_id"] = msg.message_id
-                except Exception as e:
-                    print(f"  ⚠️ Could not pin new message: {e}")
+                # Pinning logic
+                if isinstance(ping, int):
+                    best_ping = state.get("best_ping", 99999)
+                    if ping < best_ping:
+                        print(f"🏆 New best ping! {ping}ms is better than {best_ping}ms.")
+                        
+                        # Unpin old message
+                        old_pinned_id = state.get("pinned_message_id")
+                        if old_pinned_id:
+                            try:
+                                await bot.unpin_chat_message(chat_id=GROUP_ID, message_id=old_pinned_id)
+                                print(f"  📌 Unpinned old message: {old_pinned_id}")
+                            except Exception as e:
+                                print(f"  ⚠️ Could not unpin old message {old_pinned_id}: {e}")
+                        
+                        # Pin new message
+                        try:
+                            await bot.pin_chat_message(chat_id=GROUP_ID, message_id=msg.message_id, disable_notification=True)
+                            print(f"  📌 Pinned new best proxy: {msg.message_id}")
+                            state["best_ping"] = ping
+                            state["pinned_message_id"] = msg.message_id
+                            stats["best_proxy"] = {"ip": ip, "port": port, "ping": ping, "protocol": protocol}
+                        except Exception as e:
+                            print(f"  ⚠️ Could not pin new message: {e}")
 
-        return msg.message_id
-    except TelegramRetryAfter as e:
-        print(f"⚠️ Flood control exceeded. Sleeping for {e.retry_after} seconds...")
-        await asyncio.sleep(e.retry_after)
-        try:
-            msg = await bot.send_message(
-                chat_id=GROUP_ID, 
-                text=text, 
-                reply_markup=reply_markup,
-                disable_web_page_preview=True
-            )
-            print(f"✅ Published after sleep: {ip}:{port} (Msg ID: {msg.message_id})")
-            return msg.message_id
-        except Exception as retry_e:
-             print(f"❌ Failed to publish after sleep {ip}:{port}: {retry_e}")
-             return None
-    except Exception as e:
-        print(f"❌ Failed to publish {ip}:{port}: {e}")
+                return msg.message_id
+            except TelegramRetryAfter as e:
+                print(f"⚠️ Flood control exceeded. Sleeping for {e.retry_after} seconds...")
+                await asyncio.sleep(e.retry_after)
+            except Exception as e:
+                print(f"❌ Failed to publish {ip}:{port}: {e}")
+                return None
         return None
 
-async def cleanup_dead_proxies(bot, state):
+    return await _send_with_retry()
+
+async def cleanup_dead_proxies(bot, state, stats):
     print("🧹 Starting Auto-Cleanup: Checking previously published proxies...")
     proxies_to_remove = []
     
     # We only check up to 50 proxies per run to avoid timeout on GitHub Actions
-    items_to_check = list(state.items())[:50]
+    items_to_check = [item for item in list(state.items()) if isinstance(item[1], dict)][:50]
     
     for proxy_id, proxy_info in items_to_check:
         ip = proxy_info["ip"]
@@ -196,16 +219,17 @@ async def cleanup_dead_proxies(bot, state):
             
         if is_alive is False:
             print(f"💀 Dead Proxy Detected: {ip}:{port}. Deleting message {message_id}...")
-            try:
-                await bot.delete_message(chat_id=GROUP_ID, message_id=message_id)
-                print(f"  🗑️ Message {message_id} deleted successfully.")
-            except TelegramBadRequest as e:
-                if "message to delete not found" in str(e).lower():
-                    print(f"  ℹ️ Message {message_id} already deleted or missing.")
-                else:
+            if message_id != 0:
+                try:
+                    await bot.delete_message(chat_id=GROUP_ID, message_id=message_id)
+                    print(f"  🗑️ Message {message_id} deleted successfully.")
+                except TelegramBadRequest as e:
+                    if "message to delete not found" in str(e).lower():
+                        print(f"  ℹ️ Message {message_id} already deleted or missing.")
+                    else:
+                        print(f"  ⚠️ Could not delete {message_id}: {e}")
+                except Exception as e:
                     print(f"  ⚠️ Could not delete {message_id}: {e}")
-            except Exception as e:
-                print(f"  ⚠️ Could not delete {message_id}: {e}")
             
             proxies_to_remove.append(proxy_id)
             await asyncio.sleep(0.5) # Prevent flood control during mass deletion
@@ -219,11 +243,12 @@ async def cleanup_dead_proxies(bot, state):
             
     if proxies_to_remove:
         save_state(state)
+        stats["total_proxies_deleted"] += len(proxies_to_remove)
         print(f"✅ Cleanup finished. Removed {len(proxies_to_remove)} dead proxies.")
     else:
         print("✅ Cleanup finished. All checked proxies are still alive.")
 
-async def scrape_channel(bot, channel, state, mtproto_regex, socks_regex):
+async def scrape_channel(bot, channel, state, stats, mtproto_regex, socks_regex):
     print(f"🔎 Scraping: {channel}...")
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36"}
     
@@ -247,10 +272,11 @@ async def scrape_channel(bot, channel, state, mtproto_regex, socks_regex):
                         proxy_id = f"mtproto|{ip}|{port}|{secret}"
                         
                         if proxy_id not in state:
+                            stats["total_proxies_found"] += 1
                             print(f"🧪 Testing MTProto: {ip}:{port}...")
                             ping = await check_mtproto(ip, int(port))
                             if ping is not False:
-                                message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "ping": ping}, state)
+                                message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "ping": ping}, state, stats)
                                 if message_id:
                                     state[proxy_id] = {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "message_id": message_id}
                                     save_state(state)
@@ -268,10 +294,11 @@ async def scrape_channel(bot, channel, state, mtproto_regex, socks_regex):
                         proxy_id = f"socks5|{ip}|{port}"
                         
                         if proxy_id not in state:
+                            stats["total_proxies_found"] += 1
                             print(f"🧪 Testing SOCKS5: {ip}:{port}...")
                             ping = await check_socks5(ip, int(port))
                             if ping is not False:
-                                message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "socks5", "ping": ping}, state)
+                                message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "socks5", "ping": ping}, state, stats)
                                 if message_id:
                                     state[proxy_id] = {"ip": ip, "port": port, "protocol": "socks5", "message_id": message_id}
                                     save_state(state)
@@ -288,7 +315,7 @@ async def scrape_channel(bot, channel, state, mtproto_regex, socks_regex):
         except Exception as e:
             print(f"⚠️ Error scraping {url}: {e}")
 
-async def scrape_raw_url(bot, url, state, mtproto_regex, socks_regex):
+async def scrape_raw_url(bot, url, state, stats, mtproto_regex, socks_regex):
     print(f"🔎 Scraping RAW URL: {url}...")
     headers = {"User-Agent": "Mozilla/5.0"}
     try:
@@ -303,9 +330,10 @@ async def scrape_raw_url(bot, url, state, mtproto_regex, socks_regex):
                     proxy_id = f"mtproto|{ip}|{port}|{secret}"
                     
                     if proxy_id not in state:
+                        stats["total_proxies_found"] += 1
                         ping = await check_mtproto(ip, int(port))
                         if ping is not False:
-                            message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "ping": ping}, state)
+                            message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "ping": ping}, state, stats)
                             if message_id:
                                 state[proxy_id] = {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "message_id": message_id}
                                 save_state(state)
@@ -322,12 +350,15 @@ async def main():
 
     print("🚀 GitHub Actions Proxy Bot Started!")
     state = load_state()
+    stats = load_stats()
     print(f"📦 Loaded {len(state)} previously checked proxies.")
+    
+    stats["total_active_currently"] = len([p for p in state.values() if isinstance(p, dict) and p.get("message_id", 0) != 0])
 
     bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
     
     # 1. Run the Auto-Cleaner First
-    await cleanup_dead_proxies(bot, state)
+    await cleanup_dead_proxies(bot, state, stats)
     
     mtproto_regex = re.compile(r"server=([a-zA-Z0-9.-]+)(?:&|&amp;)port=(\d+)(?:&|&amp;)secret=([a-zA-Z0-9._~%-]+)")
     socks_regex = re.compile(r"socks\?server=([a-zA-Z0-9.-]+)(?:&|&amp;)port=(\d+)")
@@ -337,15 +368,19 @@ async def main():
     
     for i in range(0, len(CHANNELS), batch_size):
         batch = CHANNELS[i:i + batch_size]
-        tasks = [scrape_channel(bot, channel, state, mtproto_regex, socks_regex) for channel in batch]
+        tasks = [scrape_channel(bot, channel, state, stats, mtproto_regex, socks_regex) for channel in batch]
         await asyncio.gather(*tasks)
         await asyncio.sleep(1) # Small pause between batches
 
     for url in RAW_URLS:
-        await scrape_raw_url(bot, url, state, mtproto_regex, socks_regex)
+        await scrape_raw_url(bot, url, state, stats, mtproto_regex, socks_regex)
 
     await bot.session.close()
+    
+    # Save final stats
+    save_stats(stats)
     print("🏁 Finished all tasks.")
+    print(f"📊 STATS: Found: {stats['total_proxies_found']} | Sent: {stats['total_proxies_sent']} | Deleted: {stats['total_proxies_deleted']} | Best Ping: {stats['best_proxy']['ping']}ms")
 
 if __name__ == "__main__":
     asyncio.run(main())
