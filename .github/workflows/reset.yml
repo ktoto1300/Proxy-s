@@ -1,0 +1,37 @@
+name: Reset-all-proxy
+
+on:
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  reset-proxies:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Reset Script
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TARGET_GROUP_ID: ${{ secrets.TARGET_GROUP_ID }}
+        run: python reset_proxies.py
+
+      - name: Commit cleared state files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add sent_proxies.json stats.json || true
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Wipe sent proxies state (Manual Reset)" && git push)
