@@ -7,6 +7,7 @@ from aiogram import Bot, types
 from aiogram.enums import ParseMode
 from aiogram.client.default import DefaultBotProperties
 from aiogram.utils.keyboard import InlineKeyboardBuilder
+from aiogram.exceptions import TelegramRetryAfter
 from aiohttp_socks import ProxyConnector
 
 # Environment variables from GitHub Secrets
@@ -123,6 +124,22 @@ async def publish_proxy(bot, proxy_data):
         )
         print(f"✅ Published: {ip}:{port} ({protocol})")
         return True
+    except TelegramRetryAfter as e:
+        print(f"⚠️ Flood control exceeded. Sleeping for {e.retry_after} seconds...")
+        await asyncio.sleep(e.retry_after)
+        # Try one more time after sleeping
+        try:
+            await bot.send_message(
+                chat_id=GROUP_ID, 
+                text=text, 
+                reply_markup=reply_markup,
+                disable_web_page_preview=True
+            )
+            print(f"✅ Published after sleep: {ip}:{port} ({protocol})")
+            return True
+        except Exception as retry_e:
+             print(f"❌ Failed to publish after sleep {ip}:{port}: {retry_e}")
+             return False
     except Exception as e:
         print(f"❌ Failed to publish {ip}:{port}: {e}")
         return False
