@@ -220,6 +220,7 @@ async def scrape_channel(bot, channel, state, stats, mtproto_regex, socks_regex)
                         proxy_id = f"mtproto|{ip}|{port}|{secret}"
                         if proxy_id not in state:
                             stats["всего_найдено"] += 1
+                            print(f"🧪 Testing MTProto: {ip}:{port}...")
                             ping = await check_mtproto(ip, int(port))
                             if ping is not False:
                                 message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "mtproto", "secret": secret, "ping": ping}, state, stats)
@@ -235,6 +236,7 @@ async def scrape_channel(bot, channel, state, stats, mtproto_regex, socks_regex)
                         proxy_id = f"socks5|{ip}|{port}"
                         if proxy_id not in state:
                             stats["всего_найдено"] += 1
+                            print(f"🧪 Testing SOCKS5: {ip}:{port}...")
                             ping = await check_socks5(ip, int(port))
                             if ping is not False:
                                 message_id = await publish_proxy(bot, {"ip": ip, "port": port, "protocol": "socks5", "ping": ping}, state, stats)
@@ -282,18 +284,18 @@ async def publish_stats(bot, state, stats):
     best_protocol = str(best.get("protocol", "Нет")).upper()
     
     text = (
-        f"📊 <b>Статистика</b>\n"
+        f"📊 Статистика \n"
         f"━━━━━━━━━━━━━━━━━━━━\n\n"
-        f"🔍 Всего найдено: <code>{stats.get('всего_найдено', 0)}</code>\n"
-        f"📥 Отправлено в канал: <code>{stats.get('всего_отправлено', 0)}</code>\n"
-        f"🗑 Удалено мёртвых: <code>{stats.get('всего_удалено', 0)}</code>\n"
-        f"🟢 Сейчас активно в канале: <code>{stats.get('сейчас_активно', 0)}</code>\n\n"
+        f"🔍 Всего найдено: {stats.get('всего_найдено', 0)}\n"
+        f"📥 Отправлено в канал: {stats.get('всего_отправлено', 0)}\n"
+        f"🗑 Удалено мёртвых: {stats.get('всего_удалено', 0)}\n"
+        f"🟢 Сейчас активно в канале: {stats.get('сейчас_активно', 0)}\n\n"
         f"⏱️ Последнее сканирование:\n"
-        f"<code>{current_time_str}</code>\n\n"
+        f"{current_time_str}\n\n"
         f"🏆 Лучший прокси:\n"
-        f"├ Протокол: <code>{best_protocol}</code>\n"
-        f"├ IP:Port: <code>{best_ip}:{best_port}</code>\n"
-        f"└ Пинг: <code>{best_ping} ms</code> ⚡️\n\n"
+        f"├ Протокол: {best_protocol}\n"
+        f"├ IP:Port: {best_ip}:{best_port}\n"
+        f"└ Пинг: {best_ping} ms ⚡️\n\n"
         f"━━━━━━━━━━━━━━━━━━━━"
     )
     
@@ -301,11 +303,13 @@ async def publish_stats(bot, state, stats):
     if best_ip != "Нет":
         link = f"https://t.me/proxy?server={best_ip}&port={best_port}&secret={best_secret}" if best_protocol == "MTPROTO" else f"tg://socks?server={best_ip}&port={best_port}"
         builder = InlineKeyboardBuilder()
-        builder.row(types.InlineKeyboardButton(text="✅ Подключить к лучшему", url=link))
+        builder.row(types.InlineKeyboardButton(text="✅ Подключить", url=link))
         reply_markup = builder.as_markup()
 
     try:
-        msg = await bot.send_message(chat_id=GROUP_ID, text=text, reply_markup=reply_markup, disable_web_page_preview=True)
+        # Send as plain text (parse_mode=None) to match the user's exact requested look
+        msg = await bot.send_message(chat_id=GROUP_ID, text=text, reply_markup=reply_markup, disable_web_page_preview=True, parse_mode=None)
+        
         # Handle pinning and unpinning
         old_stats_id = state.get("stats_message_id")
         if old_stats_id:
