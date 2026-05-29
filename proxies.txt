@@ -16,4 +16,4 @@ https://t.me/proxy?server=r25.proxytg.space&port=8443&secret=eecc4a140a0d61e4ead
 https://t.me/proxy?server=72.56.41.220&port=443&secret=eec11798ab008831b474066c9e1ebf5c63617669746f2e7275
 https://t.me/proxy?server=r22.proxytg.space&port=8443&secret=eeace5ab7ab128f81a0b16ada143ec10807232322e70726f787974672e7370616365
 https://t.me/proxy?server=proxymtproto.tproxy.rest&port=8443&secret=ee79e7010200010007f0030386e24c3add626973636f7474692e79656b74616e65742e636f6d
-https://t.me/proxy?server=186.246.19.134&port=443&secret=ee17867c11b83c2c36a3de356743602b2c617669746f2e7275
+https://t.me/proxy?server=r23.proxytg.space&port=8443&secret=eed8f9cb134573d3eff7e4e031965625177232332e70726f787974672e7370616365
