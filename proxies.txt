@@ -12,3 +12,7 @@ https://t.me/proxy?server=r21.proxytg.space&port=8443&secret=eec5963870566a7e0d9
 https://t.me/proxy?server=MTP1.shadowsocks.wtf&port=443&secret=f29640b148781b897c10ecf51938086c
 https://t.me/proxy?server=raaaaaaaaaaawpaaaaaaaaaap.alotaxi.info&port=7866&secret=eef56a96537bf96aef803a831d7502e4f06d656469612e737465616d706f77657265642e636f6d
 https://t.me/proxy?server=peyk.acharbashi.info&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d
+https://t.me/proxy?server=r24.proxytg.space&port=8443&secret=eeade4e42a3bee4969fcb706467380da727232342e70726f787974672e7370616365
+https://t.me/proxy?server=r23.proxytg.space&port=8443&secret=eed8f9cb134573d3eff7e4e031965625177232332e70726f787974672e7370616365
+https://t.me/proxy?server=r22.proxytg.space&port=8443&secret=eeace5ab7ab128f81a0b16ada143ec10807232322e70726f787974672e7370616365
+https://t.me/proxy?server=r26.proxytg.space&port=8443&secret=eec479c1a98aa5c149647459a1c098634c7232362e70726f787974672e7370616365
