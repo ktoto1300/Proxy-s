@@ -13,7 +13,7 @@
     "protocol": "mtproto",
     "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
     "message_id": 999999,
-    "timestamp": 1780226229
+    "timestamp": 1780330818
   },
   "mtproto|r27.proxytg.space|8443|eefc330cd4811b83045e7621b94e0ecb147232372e70726f787974672e7370616365": {
     "ip": "r27.proxytg.space",
@@ -45,7 +45,7 @@
     "protocol": "mtproto",
     "secret": "dda5a7b5711e648c7bd534e4e87de2241b",
     "message_id": 999999,
-    "timestamp": 1780226229
+    "timestamp": 1780330818
   },
   "mtproto|gem.alotaxi.info|4515|eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d": {
     "ip": "gem.alotaxi.info",
@@ -61,7 +61,7 @@
     "protocol": "mtproto",
     "secret": "ee1603010200010001fc030386e24c3add646e2e79656b74616e65742e636f6d646c2e676f6f676c652e636f6d666172616B61762E636F6D160301020001000100000000000000000000000000000000",
     "message_id": 999999,
-    "timestamp": 1780226229
+    "timestamp": 1780330818
   },
   "mtproto|49.12.99.241|443|ee1603010200010001fc030386e24c3add646e2e79656b74616e65742e636f6d646c2e676f6f676c652e636f6d666172616B61762E636F6D160301020001000100000000000000000000000000000000": {
     "ip": "49.12.99.241",
@@ -71,41 +71,21 @@
     "message_id": 1244,
     "timestamp": 1780226116
   },
-  "mtproto|top.chunkycorp.shop|443|ee3a3365be03d6bc13518d65e70a3146c2617669746f2e7275": {
-    "message_id": 0,
-    "timestamp": 1780226147
-  },
   "mtproto|5.78.185.237|7980|EERighJJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA": {
-    "message_id": 0,
-    "timestamp": 1780226148
+    "ip": "5.78.185.237",
+    "port": 7980,
+    "protocol": "mtproto",
+    "secret": "EERighJJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "message_id": 1271,
+    "timestamp": 1780226468
   },
   "mtproto|vktop.chunkycorp.shop|443|ee3a3365be03d6bc13518d65e70a3146c2617669746f2e7275": {
-    "message_id": 0,
-    "timestamp": 1780226148
-  },
-  "socks5|172.64.47.168|2096": {
-    "message_id": 0,
-    "timestamp": 1780226148
-  },
-  "socks5|104.18.40.17|2053": {
-    "message_id": 0,
-    "timestamp": 1780226148
-  },
-  "socks5|104.18.189.153|443": {
-    "message_id": 0,
-    "timestamp": 1780226148
-  },
-  "socks5|104.19.229.21|2095": {
-    "message_id": 0,
-    "timestamp": 1780226148
-  },
-  "socks5|104.21.224.5|80": {
-    "message_id": 0,
-    "timestamp": 1780226148
-  },
-  "socks5|198.41.223.121|443": {
-    "message_id": 0,
-    "timestamp": 1780226148
+    "ip": "vktop.chunkycorp.shop",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "ee3a3365be03d6bc13518d65e70a3146c2617669746f2e7275",
+    "message_id": 1270,
+    "timestamp": 1780226444
   },
   "mtproto|r29.proxytg.space|8443|ee5b741234768d8dda7d1c17e7e7cff98a7232392e70726f787974672e7370616365": {
     "ip": "r29.proxytg.space",
@@ -114,10 +94,6 @@
     "secret": "ee5b741234768d8dda7d1c17e7e7cff98a7232392e70726f787974672e7370616365",
     "message_id": 1253,
     "timestamp": 1780226156
-  },
-  "socks5|95.216.209.22|443": {
-    "message_id": 0,
-    "timestamp": 1780226150
   },
   "mtproto|89.23.108.23|443|ee4b23e33a9d1122e920a81aef2172b5e87477697463682e7476": {
     "ip": "89.23.108.23",
@@ -142,390 +118,6 @@
     "secret": "eeb7f10957fcefd87d5e8c336fc9851d8d61642e63616e7661732d70726f78792e636f6d",
     "message_id": 1256,
     "timestamp": 1780226163
-  },
-  "socks5|87.120.93.243|443": {
-    "message_id": 0,
-    "timestamp": 1780226150
-  },
-  "mtproto|95.182.86.60|443|ee82dd957be0c6899a82879d05fecfc73a617669746f2e7275": {
-    "message_id": 0,
-    "timestamp": 1780226150
-  },
-  "mtproto|evening.nolags.pw|443|dd29b3afb209c4427676b4c43eecb7f556": {
-    "message_id": 0,
-    "timestamp": 1780226150
-  },
-  "mtproto|5.78.133.252|8443|EERighJJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA": {
-    "message_id": 0,
-    "timestamp": 1780226150
-  },
-  "mtproto|77.73.131.117|443|ee97500cee8fa3bf21435e27cf09de8b72766b2e636f6d": {
-    "message_id": 0,
-    "timestamp": 1780226150
-  },
-  "mtproto|31.56.178.248|443|ee4ce23663740cbaf7be12448a22abd6fe617669746f2e7275": {
-    "message_id": 0,
-    "timestamp": 1780226150
-  },
-  "mtproto|79.137.196.223|7443|eeeeb30662ee79541fb143515ad872d2e9dd7777772e636c6f7564666c6172652e636f6d": {
-    "message_id": 0,
-    "timestamp": 1780226150
-  },
-  "mtproto|live.tproxy.info|15|ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d": {
-    "message_id": 0,
-    "timestamp": 1780226150
-  },
-  "mtproto|topproxy.fml-subs.ru|443|dde71c854efc71f477856bd59728888359": {
-    "message_id": 0,
-    "timestamp": 1780226150
-  },
-  "mtproto|jadidporsorat.co.uk.|85|FgMBAgABAAH8AxOG4kw63Q": {
-    "message_id": 0,
-    "timestamp": 1780226150
-  },
-  "mtproto|79.137.205.22|443|ee47849470a70a19f5e6d0767b7440e90f766b2e636f6d": {
-    "message_id": 0,
-    "timestamp": 1780226150
-  },
-  "mtproto|tg.capycore.ru|443|27ebe852539fb8ec5f327c73262bb721": {
-    "message_id": 0,
-    "timestamp": 1780226150
-  },
-  "mtproto|ams1.tlgfast.com|443|083fe0c452e2407d835537872f097c54": {
-    "message_id": 0,
-    "timestamp": 1780226150
-  },
-  "mtproto|195.254.165.4|8443|EERighJJvXrFGRMCIMJdCQ%3D%3D": {
-    "message_id": 0,
-    "timestamp": 1780226150
-  },
-  "socks5|136.244.93.228|443": {
-    "message_id": 0,
-    "timestamp": 1780226154
-  },
-  "socks5|37.49.225.189|443": {
-    "message_id": 0,
-    "timestamp": 1780226154
-  },
-  "socks5|78.40.117.161|34633": {
-    "message_id": 0,
-    "timestamp": 1780226154
-  },
-  "socks5|152.233.28.198|8443": {
-    "message_id": 0,
-    "timestamp": 1780226154
-  },
-  "socks5|2.26.98.185|4443": {
-    "message_id": 0,
-    "timestamp": 1780226154
-  },
-  "socks5|69.84.182.49|2096": {
-    "message_id": 0,
-    "timestamp": 1780226154
-  },
-  "socks5|213.108.2.130|443": {
-    "message_id": 0,
-    "timestamp": 1780226154
-  },
-  "socks5|193.29.139.157|8080": {
-    "message_id": 0,
-    "timestamp": 1780226154
-  },
-  "socks5|45.83.130.97|53292": {
-    "message_id": 0,
-    "timestamp": 1780226154
-  },
-  "socks5|172.86.93.96|443": {
-    "message_id": 0,
-    "timestamp": 1780226154
-  },
-  "socks5|81.29.156.195|443": {
-    "message_id": 0,
-    "timestamp": 1780226154
-  },
-  "mtproto|proxy.kstati.host|555|ddbb2753bb20cf1e956aeaaea0e5638b7e": {
-    "message_id": 0,
-    "timestamp": 1780226168
-  },
-  "mtproto|Myamazing.dynu.net|1088|00000000000000000000000000000000": {
-    "message_id": 0,
-    "timestamp": 1780226168
-  },
-  "mtproto|MTP1.shadowsocks.wtf|443|f29640b148781b897c10ecf51938086c": {
-    "message_id": 0,
-    "timestamp": 1780226171
-  },
-  "mtproto|MTP2.shadowsocks.wtf|8081|2f10ef5a51d3689938d7825c8c5a8ad8": {
-    "message_id": 0,
-    "timestamp": 1780226171
-  },
-  "mtproto|free.fckrknbot.com|500|ddf48f621b110f302e468756840c29f916": {
-    "message_id": 0,
-    "timestamp": 1780226171
-  },
-  "mtproto|wtf.shadowsocks.wtf|8443|dd6e896e4745f8cb61486ee2dbf0114154": {
-    "message_id": 0,
-    "timestamp": 1780226171
-  },
-  "mtproto|172.65.102.115|22|dd79e344818749bd7ac519130220c25d09": {
-    "message_id": 0,
-    "timestamp": 1780226172
-  },
-  "mtproto|limited.politically.meat.garage.airline.blood.political.pretty.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.P.c.theceomagazine.cfd.|443|7gAAAAAAAAAAAAAAAAAAAAB0aGVndWFyZGlhbi5jb20%3D": {
-    "message_id": 0,
-    "timestamp": 1780226172
-  },
-  "mtproto|armantrc.ir.forcecms.ir.ntkcms.com.asadi.info.iranserve.ir.kadex.ir.forotel.com.sepehriranads.ir.pishgamanpro.com.bri-academy.ir.midsabac.ir.tablighnama.com.watchmen-co.com.qrob.ir.kermanbeauty.ir.helikala.com.tjpc.ir.mohajerinturkey.ir.vebracamera.info|443|eeda411655b684fe87abf58ec2235e28167765622e62616c652e6972": {
-    "message_id": 0,
-    "timestamp": 1780226172
-  },
-  "mtproto|limited.politically.meat.garage.airline.blood.political.pretty.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.co.travelstride.cfd.|443|7gAAAAAAAAAAAAAAAAAAAAB0aGVndWFyZGlhbi5jb20%3D": {
-    "message_id": 0,
-    "timestamp": 1780226172
-  },
-  "mtproto|proxytop.space|443|7d793037a0760186574b0282f2f435e7": {
-    "message_id": 0,
-    "timestamp": 1780226172
-  },
-  "mtproto|proxyobhod.online|443|71c30cc28759e0a10b6de5b471d69751": {
-    "message_id": 0,
-    "timestamp": 1780226172
-  },
-  "mtproto|91.107.210.176|8085|3QAAAAAAAAAAAAAAAAAAAAA%3D": {
-    "message_id": 0,
-    "timestamp": 1780226174
-  },
-  "mtproto|162.55.48.203|443|3QAAAAAAAAAAAAAAAAAAAAA%3D": {
-    "message_id": 0,
-    "timestamp": 1780226174
-  },
-  "mtproto|172.105.75.181|3443|7hYDAQIAAQAB_AMDhuJMOt1kbi55ZWt0YW5ldC5jb21kbC5nb29nbGUuY29tZmFyYWthdi5jb20WAwECAAEAAQAAAAAAAAAAAAAAAAAAAAA": {
-    "message_id": 0,
-    "timestamp": 1780226174
-  },
-  "mtproto|176.58.98.43|3443|7hYDAQIAAQAB_AMDhuJMOt1kbi55ZWt0YW5ldC5jb21kbC5nb29nbGUuY29tZmFyYWthdi5jb20WAwECAAEAAQAAAAAAAAAAAAAAAAAAAAA": {
-    "message_id": 0,
-    "timestamp": 1780226175
-  },
-  "mtproto|162.55.34.254|8085|3QAAAAAAAAAAAAAAAAAAAAA%3D": {
-    "message_id": 0,
-    "timestamp": 1780226175
-  },
-  "mtproto|45.77.140.203|443|746a6e2428ebe53299786324c187977a": {
-    "message_id": 0,
-    "timestamp": 1780226175
-  },
-  "mtproto|195.254.165.253|25565|dd79e344818749bd7ac519130220c25d09": {
-    "message_id": 0,
-    "timestamp": 1780226175
-  },
-  "mtproto|War77.KingPoroxy.dynu.com|8080|00000000000000000000000000000000": {
-    "message_id": 0,
-    "timestamp": 1780226179
-  },
-  "mtproto|War55.KingPoroxy.dynu.com|8080|00000000000000000000000000000000": {
-    "message_id": 0,
-    "timestamp": 1780226179
-  },
-  "mtproto|MicRo90.KingPoroxy.dynu.com|8080|00000000000000000000000000000000": {
-    "message_id": 0,
-    "timestamp": 1780226179
-  },
-  "mtproto|MicRo110.KingPoroxy.dynu.com|8080|00000000000000000000000000000000": {
-    "message_id": 0,
-    "timestamp": 1780226179
-  },
-  "mtproto|MicRo120.KingPoroxy.dynu.com|8080|00000000000000000000000000000000": {
-    "message_id": 0,
-    "timestamp": 1780226179
-  },
-  "mtproto|Gard10.KingPoroxy.dynu.com|8080|00000000000000000000000000000000": {
-    "message_id": 0,
-    "timestamp": 1780226179
-  },
-  "mtproto|B10.Fire.dynu.com|8080|00000000000000000000000000000000": {
-    "message_id": 0,
-    "timestamp": 1780226179
-  },
-  "mtproto|iro.3utilities.com|443|fb175d6d7f820cdc73ab11edbdcdbd74": {
-    "message_id": 0,
-    "timestamp": 1780226179
-  },
-  "mtproto|haha.hmaresistance.live|8080|dd00000000000000000000000000000000": {
-    "message_id": 0,
-    "timestamp": 1780226180
-  },
-  "mtproto|Yo.Fire.dynu.com|8080|00000000000000000000000000000000": {
-    "message_id": 0,
-    "timestamp": 1780226180
-  },
-  "mtproto|65.109.16.139|443|dd104462821249bd7ac519130220c25d09": {
-    "message_id": 0,
-    "timestamp": 1780226188
-  },
-  "mtproto|157.90.124.2|4455|dd104462821249bd7ac519130220c25d09": {
-    "message_id": 0,
-    "timestamp": 1780226188
-  },
-  "mtproto|178.104.81.34|4455|dd104462821249bd7ac519130220c25d09": {
-    "message_id": 0,
-    "timestamp": 1780226188
-  },
-  "mtproto|49.12.79.244|443|dd104462821249bd7ac519130220c25d09": {
-    "message_id": 0,
-    "timestamp": 1780226188
-  },
-  "mtproto|65.109.16.146|443|dd104462821249bd7ac519130220c25d09": {
-    "message_id": 0,
-    "timestamp": 1780226188
-  },
-  "mtproto|65.21.58.190|443|dd104462821249bd7ac519130220c25d09": {
-    "message_id": 0,
-    "timestamp": 1780226188
-  },
-  "mtproto|89.167.109.120|443|dd104462821249bd7ac519130220c25d09": {
-    "message_id": 0,
-    "timestamp": 1780226188
-  },
-  "mtproto|65.108.50.120|443|dd104462821249bd7ac519130220c25d09": {
-    "message_id": 0,
-    "timestamp": 1780226188
-  },
-  "mtproto|5.78.207.126|443|dd00112233445566778899aabbccddeeff": {
-    "message_id": 0,
-    "timestamp": 1780226188
-  },
-  "mtproto|87.99.156.54|443|dd00112233445566778899aabbccddeeff": {
-    "message_id": 0,
-    "timestamp": 1780226188
-  },
-  "mtproto|135.181.31.175|443|dd104462821249bd7ac519130220c25d09": {
-    "message_id": 0,
-    "timestamp": 1780226188
-  },
-  "socks5|198.105.111.8|6686": {
-    "message_id": 0,
-    "timestamp": 1780226194
-  },
-  "socks5|45.43.70.24|6311": {
-    "message_id": 0,
-    "timestamp": 1780226194
-  },
-  "socks5|145.223.46.142|5692": {
-    "message_id": 0,
-    "timestamp": 1780226194
-  },
-  "socks5|578.135.105.217|50504": {
-    "message_id": 0,
-    "timestamp": 1780226194
-  },
-  "socks5|45.80.108.28|80": {
-    "message_id": 0,
-    "timestamp": 1780226194
-  },
-  "socks5|104.18.21.253|80": {
-    "message_id": 0,
-    "timestamp": 1780226194
-  },
-  "socks5|104.26.7.185|80": {
-    "message_id": 0,
-    "timestamp": 1780226194
-  },
-  "socks5|172.67.167.139|80": {
-    "message_id": 0,
-    "timestamp": 1780226194
-  },
-  "socks5|104.24.187.253|80": {
-    "message_id": 0,
-    "timestamp": 1780226194
-  },
-  "socks5|45.131.7.21|80": {
-    "message_id": 0,
-    "timestamp": 1780226194
-  },
-  "socks5|43.156.8.189|1080": {
-    "message_id": 0,
-    "timestamp": 1780226194
-  },
-  "socks5|89.249.198.91|6177": {
-    "message_id": 0,
-    "timestamp": 1780226195
-  },
-  "socks5|47.79.252.232|1080": {
-    "message_id": 0,
-    "timestamp": 1780226195
-  },
-  "socks5|47.82.176.25|1080": {
-    "message_id": 0,
-    "timestamp": 1780226195
-  },
-  "socks5|47.79.253.209|1080": {
-    "message_id": 0,
-    "timestamp": 1780226196
-  },
-  "socks5|47.82.179.73|1080": {
-    "message_id": 0,
-    "timestamp": 1780226196
-  },
-  "socks5|47.82.179.128|1080": {
-    "message_id": 0,
-    "timestamp": 1780226196
-  },
-  "socks5|47.82.177.137|1080": {
-    "message_id": 0,
-    "timestamp": 1780226196
-  },
-  "socks5|47.82.148.122|1080": {
-    "message_id": 0,
-    "timestamp": 1780226196
-  },
-  "socks5|47.79.254.136|1080": {
-    "message_id": 0,
-    "timestamp": 1780226196
-  },
-  "socks5|47.82.146.43|1080": {
-    "message_id": 0,
-    "timestamp": 1780226196
-  },
-  "socks5|47.79.254.125|1080": {
-    "message_id": 0,
-    "timestamp": 1780226196
-  },
-  "socks5|51.15.5.21|60349": {
-    "message_id": 0,
-    "timestamp": 1780226196
-  },
-  "socks5|51.38.155.24|46069": {
-    "message_id": 0,
-    "timestamp": 1780226196
-  },
-  "socks5|46.10.208.106|8192": {
-    "message_id": 0,
-    "timestamp": 1780226196
-  },
-  "socks5|123.136.29.182|5678": {
-    "message_id": 0,
-    "timestamp": 1780226197
-  },
-  "socks5|177.38.5.134|4153": {
-    "message_id": 0,
-    "timestamp": 1780226197
-  },
-  "socks5|45.65.113.18|27676": {
-    "message_id": 0,
-    "timestamp": 1780226197
-  },
-  "socks5|1.180.0.162|7302": {
-    "message_id": 0,
-    "timestamp": 1780226197
-  },
-  "socks5|47.82.179.167|1080": {
-    "message_id": 0,
-    "timestamp": 1780226198
-  },
-  "socks5|47.79.249.172|1080": {
-    "message_id": 0,
-    "timestamp": 1780226199
   },
   "mtproto|r21.proxytg.space|8443|eec5963870566a7e0d9a04f5f792d9faf47232312e70726f787974672e7370616365": {
     "ip": "r21.proxytg.space",
@@ -606,5 +198,537 @@
     "secret": "eed8f9cb134573d3eff7e4e031965625177232332e70726f787974672e7370616365",
     "message_id": 999999,
     "timestamp": 1780226229
+  },
+  "mtproto|31.56.178.248|443|ee4ce23663740cbaf7be12448a22abd6fe617669746f2e7275": {
+    "ip": "31.56.178.248",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "ee4ce23663740cbaf7be12448a22abd6fe617669746f2e7275",
+    "message_id": 1285,
+    "timestamp": 1780226547
+  },
+  "mtproto|sex.arixo.shop|443|eec11798ab008831b474066c9e1ebf5c59617669746f2e7275": {
+    "ip": "sex.arixo.shop",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "eec11798ab008831b474066c9e1ebf5c59617669746f2e7275",
+    "message_id": 1291,
+    "timestamp": 1780227847
+  },
+  "mtproto|77.73.131.117|443|ee97500cee8fa3bf21435e27cf09de8b72766b2e636f6d": {
+    "ip": "77.73.131.117",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "ee97500cee8fa3bf21435e27cf09de8b72766b2e636f6d",
+    "message_id": 1296,
+    "timestamp": 1780228467
+  },
+  "mtproto|r34.proxytg.space|8443|eebb8fe6fb6d181e454f4454195b880e627233342e70726f787974672e7370616365": {
+    "ip": "r34.proxytg.space",
+    "port": 8443,
+    "protocol": "mtproto",
+    "secret": "eebb8fe6fb6d181e454f4454195b880e627233342e70726f787974672e7370616365",
+    "message_id": 1303,
+    "timestamp": 1780251658
+  },
+  "mtproto|r35.proxytg.space|8443|ee11c7cb7399e1f38aaec2f5152c4f051c7233352e70726f787974672e7370616365": {
+    "ip": "r35.proxytg.space",
+    "port": 8443,
+    "protocol": "mtproto",
+    "secret": "ee11c7cb7399e1f38aaec2f5152c4f051c7233352e70726f787974672e7370616365",
+    "message_id": 1317,
+    "timestamp": 1780251711
+  },
+  "mtproto|www.minetor.co.uk|443|ee104462821249bd7ac519130220c25d09": {
+    "ip": "www.minetor.co.uk",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "ee104462821249bd7ac519130220c25d09",
+    "message_id": 1318,
+    "timestamp": 1780251712
+  },
+  "mtproto|87.58.201.189|443|ee1caa97e5002aec0421f8c5b04a53c0e37362657262616e6b2e7275": {
+    "ip": "87.58.201.189",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "ee1caa97e5002aec0421f8c5b04a53c0e37362657262616e6b2e7275",
+    "message_id": 1315,
+    "timestamp": 1780251706
+  },
+  "mtproto|sosat.rkn.lat|443|ee66e66017432e98b7535ebbbc1588f8a26d61782e7275": {
+    "ip": "sosat.rkn.lat",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "ee66e66017432e98b7535ebbbc1588f8a26d61782e7275",
+    "message_id": 1316,
+    "timestamp": 1780251708
+  },
+  "mtproto|r33.proxytg.space|8443|eec38451cb166b3ed3a1bbf1d4e7e382817233332e70726f787974672e7370616365": {
+    "ip": "r33.proxytg.space",
+    "port": 8443,
+    "protocol": "mtproto",
+    "secret": "eec38451cb166b3ed3a1bbf1d4e7e382817233332e70726f787974672e7370616365",
+    "message_id": 1302,
+    "timestamp": 1780251658
+  },
+  "socks5|147.45.76.207|8080": {
+    "ip": "147.45.76.207",
+    "port": 8080,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 1306,
+    "timestamp": 1780251687
+  },
+  "mtproto|heart.nolags.pw|443|dd1d8f1aa6cb8726a39f24cc3943099e33": {
+    "ip": "heart.nolags.pw",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "dd1d8f1aa6cb8726a39f24cc3943099e33",
+    "message_id": 1324,
+    "timestamp": 1780252241
+  },
+  "mtproto|89.208.113.182|443|ee171a9375170afdb5095d7bc9c19cc562766b2e636f6d": {
+    "ip": "89.208.113.182",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "ee171a9375170afdb5095d7bc9c19cc562766b2e636f6d",
+    "message_id": 1355,
+    "timestamp": 1780290059
+  },
+  "mtproto|r36.proxytg.space|8443|eee3df338e2eddce462101e6eecbdd9ee87233362e70726f787974672e7370616365": {
+    "ip": "r36.proxytg.space",
+    "port": 8443,
+    "protocol": "mtproto",
+    "secret": "eee3df338e2eddce462101e6eecbdd9ee87233362e70726f787974672e7370616365",
+    "message_id": 1353,
+    "timestamp": 1780290053
+  },
+  "mtproto|alpinavpn.hatecens.cc|7443|ee27a9fe4d55c1a9dabfcb2b872b00b6e6616c70696e6176706e2e6861746563656e732e6363": {
+    "ip": "alpinavpn.hatecens.cc",
+    "port": 7443,
+    "protocol": "mtproto",
+    "secret": "ee27a9fe4d55c1a9dabfcb2b872b00b6e6616c70696e6176706e2e6861746563656e732e6363",
+    "message_id": 1354,
+    "timestamp": 1780290059
+  },
+  "mtproto|connect.tproxy.store|8443|dd79e7010200010007f0030386e24c3add": {
+    "ip": "connect.tproxy.store",
+    "port": 8443,
+    "protocol": "mtproto",
+    "secret": "dd79e7010200010007f0030386e24c3add",
+    "message_id": 1356,
+    "timestamp": 1780290068
+  },
+  "mtproto|thisis.tproxy.store|8443|dd79e7010200010007f0030386e24c3add": {
+    "ip": "thisis.tproxy.store",
+    "port": 8443,
+    "protocol": "mtproto",
+    "secret": "dd79e7010200010007f0030386e24c3add",
+    "message_id": 1374,
+    "timestamp": 1780294092
+  },
+  "mtproto|yandex.chunkycorp.shop|443|ee3a3365be03d6bc13518d65e70a3146c2617669746f2e7275": {
+    "ip": "yandex.chunkycorp.shop",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "ee3a3365be03d6bc13518d65e70a3146c2617669746f2e7275",
+    "message_id": 1365,
+    "timestamp": 1780293879
+  },
+  "socks5|94.131.95.92|1080": {
+    "ip": "94.131.95.92",
+    "port": 1080,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 1380,
+    "timestamp": 1780322342
+  },
+  "mtproto|s01.neo-trading.org|443|ee7391242569590e01416101927d38b565646e732d73686f702e7275": {
+    "ip": "s01.neo-trading.org",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "ee7391242569590e01416101927d38b565646e732d73686f702e7275",
+    "message_id": 1388,
+    "timestamp": 1780322442
+  },
+  "mtproto|security.chunkycorp.shop|443|ee3a3365be03d6bc13518d65e70a3146c2617669746f2e7275": {
+    "ip": "security.chunkycorp.shop",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "ee3a3365be03d6bc13518d65e70a3146c2617669746f2e7275",
+    "message_id": 1403,
+    "timestamp": 1780322736
+  },
+  "mtproto|45.150.110.32|443|ee1c88677acf461e09e68f4ff0cef5724a617669746f2e7275": {
+    "ip": "45.150.110.32",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "ee1c88677acf461e09e68f4ff0cef5724a617669746f2e7275",
+    "message_id": 1411,
+    "timestamp": 1780322879
+  },
+  "mtproto|r42.proxytg.space|8443|eed45e80e76b5cd09e7994e4417a324fa17234322e70726f787974672e7370616365": {
+    "ip": "r42.proxytg.space",
+    "port": 8443,
+    "protocol": "mtproto",
+    "secret": "eed45e80e76b5cd09e7994e4417a324fa17234322e70726f787974672e7370616365",
+    "message_id": 1395,
+    "timestamp": 1780322581
+  },
+  "mtproto|95.182.87.20|443|eec11798ab008831b474066c9e1ebf5c59617669746f2e7275": {
+    "ip": "95.182.87.20",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "eec11798ab008831b474066c9e1ebf5c59617669746f2e7275",
+    "message_id": 1426,
+    "timestamp": 1780323242
+  },
+  "mtproto|mtp7.sosproxy.space|443|ee77eea55483cdb42d81ab76a5ceddc28d64726976652e676f6f676c652e636f6d": {
+    "ip": "mtp7.sosproxy.space",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "ee77eea55483cdb42d81ab76a5ceddc28d64726976652e676f6f676c652e636f6d",
+    "message_id": 1419,
+    "timestamp": 1780323038
+  },
+  "mtproto|r43.proxytg.space|8443|ee53e5dc51c0bc1af6f2e26c8462f60f2f7234332e70726f787974672e7370616365": {
+    "ip": "r43.proxytg.space",
+    "port": 8443,
+    "protocol": "mtproto",
+    "secret": "ee53e5dc51c0bc1af6f2e26c8462f60f2f7234332e70726f787974672e7370616365",
+    "message_id": 1443,
+    "timestamp": 1780323547
+  },
+  "mtproto|fridayvpn1.proxyprosto.sbs|443|ee81aebd9867cc45d05974d953706819d177622e7275": {
+    "ip": "fridayvpn1.proxyprosto.sbs",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "ee81aebd9867cc45d05974d953706819d177622e7275",
+    "message_id": 1435,
+    "timestamp": 1780323335
+  },
+  "socks5|85.155.96.109|1080|": {
+    "ip": "85.155.96.109",
+    "port": 1080,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 1470,
+    "timestamp": 1780328669
+  },
+  "socks5|43.165.6.179|1080|": {
+    "ip": "43.165.6.179",
+    "port": 1080,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 1472,
+    "timestamp": 1780329822
+  },
+  "socks5|167.71.42.89|1080|": {
+    "ip": "167.71.42.89",
+    "port": 1080,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 1473,
+    "timestamp": 1780329848
+  },
+  "socks5|5.255.103.55|1080|": {
+    "ip": "5.255.103.55",
+    "port": 1080,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 1474,
+    "timestamp": 1780330194
+  },
+  "socks5|151.241.215.23|1080|": {
+    "ip": "151.241.215.23",
+    "port": 1080,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 1475,
+    "timestamp": 1780330236
+  },
+  "socks5|185.125.102.149|1080|": {
+    "ip": "185.125.102.149",
+    "port": 1080,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 1476,
+    "timestamp": 1780330305
+  },
+  "mtproto|asiatech.email|443|3QAAAAAAAAAAAAAAAAAAAAA": {
+    "message_id": 0,
+    "timestamp": 1780330720
+  },
+  "mtproto|one.two.nofilter2two.com.|9090|FgMBAgABAAH8AwOG4kw63QtY2RueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA": {
+    "message_id": 0,
+    "timestamp": 1780330720
+  },
+  "mtproto|65.109.24.37|8080|dd49a70de57a60174f18dfd7fe6ef6aaf5": {
+    "message_id": 0,
+    "timestamp": 1780330722
+  },
+  "mtproto|85.133.194.23|8443|eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA": {
+    "message_id": 0,
+    "timestamp": 1780330723
+  },
+  "mtproto|proxy.kstati.host|555|ddbb2753bb20cf1e956aeaaea0e5638b7e": {
+    "message_id": 0,
+    "timestamp": 1780330732
+  },
+  "mtproto|Myamazing.dynu.net|1088|00000000000000000000000000000000": {
+    "message_id": 0,
+    "timestamp": 1780330732
+  },
+  "mtproto|MTP1.shadowsocks.wtf|443|f29640b148781b897c10ecf51938086c": {
+    "message_id": 0,
+    "timestamp": 1780330735
+  },
+  "mtproto|MTP2.shadowsocks.wtf|8081|2f10ef5a51d3689938d7825c8c5a8ad8": {
+    "message_id": 0,
+    "timestamp": 1780330735
+  },
+  "mtproto|free.fckrknbot.com|500|ddf48f621b110f302e468756840c29f916": {
+    "message_id": 0,
+    "timestamp": 1780330735
+  },
+  "mtproto|wtf.shadowsocks.wtf|8443|dd6e896e4745f8cb61486ee2dbf0114154": {
+    "message_id": 0,
+    "timestamp": 1780330735
+  },
+  "mtproto|172.65.102.115|22|dd79e344818749bd7ac519130220c25d09": {
+    "message_id": 0,
+    "timestamp": 1780330743
+  },
+  "mtproto|limited.politically.meat.garage.airline.blood.political.pretty.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.co.travelstride.cfd.|443|7gAAAAAAAAAAAAAAAAAAAAB0aGVndWFyZGlhbi5jb20%3D": {
+    "message_id": 0,
+    "timestamp": 1780330743
+  },
+  "mtproto|limited.politically.meat.garage.airline.blood.political.pretty.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.PC.comedy.eat.prayer.P.c.theceomagazine.cfd.|443|7gAAAAAAAAAAAAAAAAAAAAB0aGVndWFyZGlhbi5jb20%3D": {
+    "message_id": 0,
+    "timestamp": 1780330743
+  },
+  "mtproto|proxyobhod.online|443|71c30cc28759e0a10b6de5b471d69751": {
+    "message_id": 0,
+    "timestamp": 1780330743
+  },
+  "mtproto|proxytop.space|443|7d793037a0760186574b0282f2f435e7": {
+    "message_id": 0,
+    "timestamp": 1780330743
+  },
+  "mtproto|armantrc.ir.forcecms.ir.ntkcms.com.asadi.info.iranserve.ir.kadex.ir.forotel.com.sepehriranads.ir.pishgamanpro.com.bri-academy.ir.midsabac.ir.tablighnama.com.watchmen-co.com.qrob.ir.kermanbeauty.ir.helikala.com.tjpc.ir.mohajerinturkey.ir.vebracamera.info|443|eeda411655b684fe87abf58ec2235e28167765622e62616c652e6972": {
+    "message_id": 0,
+    "timestamp": 1780330743
+  },
+  "mtproto|172.105.75.181|3443|7hYDAQIAAQAB_AMDhuJMOt1kbi55ZWt0YW5ldC5jb21kbC5nb29nbGUuY29tZmFyYWthdi5jb20WAwECAAEAAQAAAAAAAAAAAAAAAAAAAAA": {
+    "message_id": 0,
+    "timestamp": 1780330746
+  },
+  "mtproto|162.55.48.203|443|3QAAAAAAAAAAAAAAAAAAAAA%3D": {
+    "message_id": 0,
+    "timestamp": 1780330746
+  },
+  "mtproto|91.107.210.176|8085|3QAAAAAAAAAAAAAAAAAAAAA%3D": {
+    "message_id": 0,
+    "timestamp": 1780330746
+  },
+  "mtproto|176.58.98.43|3443|7hYDAQIAAQAB_AMDhuJMOt1kbi55ZWt0YW5ldC5jb21kbC5nb29nbGUuY29tZmFyYWthdi5jb20WAwECAAEAAQAAAAAAAAAAAAAAAAAAAAA": {
+    "message_id": 0,
+    "timestamp": 1780330746
+  },
+  "mtproto|162.55.34.254|8085|3QAAAAAAAAAAAAAAAAAAAAA%3D": {
+    "message_id": 0,
+    "timestamp": 1780330746
+  },
+  "mtproto|45.77.140.203|443|746a6e2428ebe53299786324c187977a": {
+    "message_id": 0,
+    "timestamp": 1780330746
+  },
+  "mtproto|195.254.165.253|25565|dd79e344818749bd7ac519130220c25d09": {
+    "message_id": 0,
+    "timestamp": 1780330746
+  },
+  "mtproto|195.254.165.249|25565|dd79e344818749bd7ac519130220c25d09": {
+    "message_id": 0,
+    "timestamp": 1780330746
+  },
+  "mtproto|195.254.165.250|25565|dd79e344818749bd7ac519130220c25d09": {
+    "message_id": 0,
+    "timestamp": 1780330746
+  },
+  "mtproto|65.109.16.139|443|dd104462821249bd7ac519130220c25d09": {
+    "message_id": 0,
+    "timestamp": 1780330770
+  },
+  "mtproto|157.90.124.2|4455|dd104462821249bd7ac519130220c25d09": {
+    "message_id": 0,
+    "timestamp": 1780330770
+  },
+  "mtproto|178.104.81.34|4455|dd104462821249bd7ac519130220c25d09": {
+    "message_id": 0,
+    "timestamp": 1780330770
+  },
+  "mtproto|49.12.79.244|443|dd104462821249bd7ac519130220c25d09": {
+    "message_id": 0,
+    "timestamp": 1780330770
+  },
+  "mtproto|65.109.16.146|443|dd104462821249bd7ac519130220c25d09": {
+    "message_id": 0,
+    "timestamp": 1780330770
+  },
+  "mtproto|65.21.58.190|443|dd104462821249bd7ac519130220c25d09": {
+    "message_id": 0,
+    "timestamp": 1780330770
+  },
+  "mtproto|89.167.109.120|443|dd104462821249bd7ac519130220c25d09": {
+    "message_id": 0,
+    "timestamp": 1780330770
+  },
+  "mtproto|65.108.50.120|443|dd104462821249bd7ac519130220c25d09": {
+    "message_id": 0,
+    "timestamp": 1780330770
+  },
+  "mtproto|5.78.207.126|443|dd00112233445566778899aabbccddeeff": {
+    "message_id": 0,
+    "timestamp": 1780330770
+  },
+  "mtproto|87.99.156.54|443|dd00112233445566778899aabbccddeeff": {
+    "message_id": 0,
+    "timestamp": 1780330770
+  },
+  "mtproto|135.181.31.175|443|dd104462821249bd7ac519130220c25d09": {
+    "message_id": 0,
+    "timestamp": 1780330770
+  },
+  "mtproto|62.238.0.202|4455|dd104462821249bd7ac519130220c25d09": {
+    "message_id": 0,
+    "timestamp": 1780330770
+  },
+  "mtproto|95.217.235.33|443|dd104462821249bd7ac519130220c25d09": {
+    "message_id": 0,
+    "timestamp": 1780330770
+  },
+  "mtproto|167.235.249.231|443|dd104462821249bd7ac519130220c25d09": {
+    "message_id": 0,
+    "timestamp": 1780330770
+  },
+  "socks5|8.142.3.145|3306": {
+    "message_id": 0,
+    "timestamp": 1780330781
+  },
+  "socks5|578.135.105.217|50504": {
+    "message_id": 0,
+    "timestamp": 1780330781
+  },
+  "socks5|51.158.105.107|16379": {
+    "message_id": 0,
+    "timestamp": 1780330783
+  },
+  "socks5|51.158.64.130|16379": {
+    "message_id": 0,
+    "timestamp": 1780330783
+  },
+  "socks5|51.15.5.21|60349": {
+    "message_id": 0,
+    "timestamp": 1780330783
+  },
+  "socks5|51.75.126.150|57328": {
+    "message_id": 0,
+    "timestamp": 1780330783
+  },
+  "socks5|51.38.155.24|46069": {
+    "message_id": 0,
+    "timestamp": 1780330783
+  },
+  "socks5|46.10.208.106|8192": {
+    "message_id": 0,
+    "timestamp": 1780330783
+  },
+  "socks5|45.65.113.18|27676": {
+    "message_id": 0,
+    "timestamp": 1780330784
+  },
+  "socks5|1.180.0.162|7302": {
+    "message_id": 0,
+    "timestamp": 1780330786
+  },
+  "socks5|51.15.240.207|16379": {
+    "message_id": 0,
+    "timestamp": 1780330787
+  },
+  "socks5|47.88.104.126|3344": {
+    "message_id": 0,
+    "timestamp": 1780330787
+  },
+  "socks5|47.250.56.98|19190": {
+    "message_id": 0,
+    "timestamp": 1780330787
+  },
+  "socks5|8.222.151.218|5566": {
+    "message_id": 0,
+    "timestamp": 1780330787
+  },
+  "socks5|51.15.223.12|16379": {
+    "message_id": 0,
+    "timestamp": 1780330787
+  },
+  "socks5|8.210.4.18|7779": {
+    "message_id": 0,
+    "timestamp": 1780330787
+  },
+  "socks5|5.133.219.4|63434": {
+    "message_id": 0,
+    "timestamp": 1780330787
+  },
+  "socks5|39.170.85.129|7302": {
+    "message_id": 0,
+    "timestamp": 1780330787
+  },
+  "socks5|37.59.50.81|5055": {
+    "message_id": 0,
+    "timestamp": 1780330787
+  },
+  "socks5|5.42.87.164|56789": {
+    "message_id": 0,
+    "timestamp": 1780330787
+  },
+  "socks5|1.180.49.222|7302": {
+    "message_id": 0,
+    "timestamp": 1780330787
+  },
+  "socks5|31.211.130.237|8192": {
+    "message_id": 0,
+    "timestamp": 1780330787
+  },
+  "socks5|51.158.98.211|16379": {
+    "message_id": 0,
+    "timestamp": 1780330787
+  },
+  "socks5|24.249.199.4|4145": {
+    "message_id": 0,
+    "timestamp": 1780330787
+  },
+  "socks5|23.251.62.210|10080": {
+    "message_id": 0,
+    "timestamp": 1780330787
+  },
+  "socks5|24.249.199.12|4145": {
+    "message_id": 0,
+    "timestamp": 1780330787
+  },
+  "socks5|51.15.210.79|16379": {
+    "message_id": 0,
+    "timestamp": 1780330787
+  },
+  "socks5|51.15.133.214|16379": {
+    "message_id": 0,
+    "timestamp": 1780330787
+  },
+  "socks5|51.89.68.78|9050": {
+    "message_id": 0,
+    "timestamp": 1780330787
+  },
+  "socks5|51.15.196.107|16379": {
+    "message_id": 0,
+    "timestamp": 1780330787
   }
 }
