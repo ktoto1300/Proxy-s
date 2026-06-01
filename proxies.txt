@@ -48,7 +48,10 @@ https://t.me/proxy?server=vktop.chunkycorp.shop&port=443&secret=ee3a3365be03d6bc
 https://t.me/proxy?server=www.minetor.co.uk&port=443&secret=ee104462821249bd7ac519130220c25d09
 https://t.me/proxy?server=yandex.chunkycorp.shop&port=443&secret=ee3a3365be03d6bc13518d65e70a3146c2617669746f2e7275
 tg://socks?server=147.45.76.207&port=8080
+tg://socks?server=151.241.215.23&port=1080
 tg://socks?server=167.71.42.89&port=1080
+tg://socks?server=185.125.102.149&port=1080
 tg://socks?server=43.165.6.179&port=1080
+tg://socks?server=5.255.103.55&port=1080
 tg://socks?server=85.155.96.109&port=1080
 tg://socks?server=94.131.95.92&port=1080
