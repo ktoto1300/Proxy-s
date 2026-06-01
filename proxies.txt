@@ -37,4 +37,5 @@ https://t.me/proxy?server=sexy.arixo.shop&port=443&secret=eec11798ab008831b47406
 https://t.me/proxy?server=sosat.rkn.lat&port=443&secret=ee66e66017432e98b7535ebbbc1588f8a26d61782e7275
 https://t.me/proxy?server=vktop.chunkycorp.shop&port=443&secret=ee3a3365be03d6bc13518d65e70a3146c2617669746f2e7275
 https://t.me/proxy?server=www.minetor.co.uk&port=443&secret=ee104462821249bd7ac519130220c25d09
+https://t.me/proxy?server=yandex.chunkycorp.shop&port=443&secret=ee3a3365be03d6bc13518d65e70a3146c2617669746f2e7275
 tg://socks?server=147.45.76.207&port=8080
