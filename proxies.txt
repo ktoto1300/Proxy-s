@@ -4,6 +4,7 @@ https://t.me/proxy?server=49.12.99.241&port=443&secret=ee1603010200010001fc03038
 https://t.me/proxy?server=49.13.69.17&port=443&secret=ee1603010200010001fc030386e24c3add646e2e79656b74616e65742e636f6d646c2e676f6f676c652e636f6d666172616B61762E636F6D160301020001000100000000000000000000000000000000
 https://t.me/proxy?server=95.182.87.20&port=443&secret=eec11798ab008831b474066c9e1ebf5c59617669746f2e7275
 https://t.me/proxy?server=connect.tproxy.store&port=8443&secret=dd79e7010200010007f0030386e24c3add
+https://t.me/proxy?server=eboybey.flowaccess.site&port=8443&secret=ee1a3341522f265448a11cbb608f42166f65626f796265792e666c6f776163636573732e73697465
 https://t.me/proxy?server=ether.nolags.pw&port=443&secret=dd86e17c6a253f59eac4b4909095ba3019
 https://t.me/proxy?server=fridayvpn1.proxyprosto.sbs&port=443&secret=ee81aebd9867cc45d05974d953706819d177622e7275
 https://t.me/proxy?server=mash.drproxy.pro&port=443&secret=dda5a7b5711e648c7bd534e4e87de2241b
@@ -11,6 +12,7 @@ https://t.me/proxy?server=mtp7.sosproxy.space&port=443&secret=ee77eea55483cdb42d
 https://t.me/proxy?server=proxy.dreamerlook.ru&port=444&secret=ee00000000000000000000000000000000766b2e636f6d
 https://t.me/proxy?server=r35.proxytg.space&port=8443&secret=ee11c7cb7399e1f38aaec2f5152c4f051c7233352e70726f787974672e7370616365
 https://t.me/proxy?server=r36.proxytg.space&port=8443&secret=eee3df338e2eddce462101e6eecbdd9ee87233362e70726f787974672e7370616365
+https://t.me/proxy?server=r39.proxytg.space&port=8443&secret=eeda4e9c22fd9b2dcf174ceb3beef08a2d7233392e70726f787974672e7370616365
 https://t.me/proxy?server=r42.proxytg.space&port=8443&secret=eed45e80e76b5cd09e7994e4417a324fa17234322e70726f787974672e7370616365
 https://t.me/proxy?server=r43.proxytg.space&port=8443&secret=ee53e5dc51c0bc1af6f2e26c8462f60f2f7234332e70726f787974672e7370616365
 https://t.me/proxy?server=r44.proxytg.space&port=8443&secret=eebf7b9e22c9202130923254db55f17ed07234342e70726f787974672e7370616365
