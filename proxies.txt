@@ -8,10 +8,12 @@ https://t.me/proxy?server=87.248.129.13&port=15&secret=ee1603010200010001fc03038
 https://t.me/proxy?server=93.185.167.212&port=443&secret=ee1c88677acf461e09e68f4ff0cef5724a617669746f2e7275
 https://t.me/proxy?server=95.182.87.20&port=443&secret=eec11798ab008831b474066c9e1ebf5c59617669746f2e7275
 https://t.me/proxy?server=bebebe.flowstreamhub.site&port=8443&secret=ee946d6bcda5ca73247aee8016c3a10e0e6265626562652e666c6f7773747265616d6875622e73697465
+https://t.me/proxy?server=big3.mtproxygram.lol&port=853&secret=ee9909e7aa6bc62461a0b60f33af14a68462726f777365722e79616e6465782e636f6d
 https://t.me/proxy?server=connect.tproxy.store&port=8443&secret=dd79e7010200010007f0030386e24c3add
 https://t.me/proxy?server=eboybey.flowaccess.site&port=8443&secret=ee1a3341522f265448a11cbb608f42166f65626f796265792e666c6f776163636573732e73697465
 https://t.me/proxy?server=ether.nolags.pw&port=443&secret=dd86e17c6a253f59eac4b4909095ba3019
 https://t.me/proxy?server=fridayvpn1.proxyprosto.sbs&port=443&secret=ee81aebd9867cc45d05974d953706819d177622e7275
+https://t.me/proxy?server=gert51.mtproxygram.pro&port=853&secret=eee10b50be5aa40f96fbec7937a06f3fcc62726f777365722e79616e6465782e636f6d
 https://t.me/proxy?server=mash.drproxy.pro&port=443&secret=dda5a7b5711e648c7bd534e4e87de2241b
 https://t.me/proxy?server=mtp7.sosproxy.space&port=443&secret=ee77eea55483cdb42d81ab76a5ceddc28d64726976652e676f6f676c652e636f6d
 https://t.me/proxy?server=mtp8.sosproxy.space&port=443&secret=eee9dab8aa5e5ede020088b669a17b907864726976652e676f6f676c652e636f6d
@@ -22,12 +24,14 @@ https://t.me/proxy?server=r39.proxytg.space&port=8443&secret=eeda4e9c22fd9b2dcf1
 https://t.me/proxy?server=r42.proxytg.space&port=8443&secret=eed45e80e76b5cd09e7994e4417a324fa17234322e70726f787974672e7370616365
 https://t.me/proxy?server=r43.proxytg.space&port=8443&secret=ee53e5dc51c0bc1af6f2e26c8462f60f2f7234332e70726f787974672e7370616365
 https://t.me/proxy?server=r44.proxytg.space&port=8443&secret=eebf7b9e22c9202130923254db55f17ed07234342e70726f787974672e7370616365
+https://t.me/proxy?server=rkn.quickrouteapp.xyz&port=8443&secret=eeae82b9fd491e0fde6eb677e47099729b726b6e2e717569636b726f7574656170702e78797a
 https://t.me/proxy?server=s01.neo-trading.org&port=443&secret=ee7391242569590e01416101927d38b565646e732d73686f702e7275
 https://t.me/proxy?server=s02.neo-trading.org&port=443&secret=ee6ec9f7e082baf2397b450727ce78447e6f7a6f6e2e7275
 https://t.me/proxy?server=security.chunkycorp.shop&port=443&secret=ee3a3365be03d6bc13518d65e70a3146c2617669746f2e7275
 https://t.me/proxy?server=sex.arixo.shop&port=443&secret=eec11798ab008831b474066c9e1ebf5c59617669746f2e7275
 https://t.me/proxy?server=thisis.tproxy.store&port=8443&secret=dd79e7010200010007f0030386e24c3add
 https://t.me/proxy?server=trump.chunkycorp.shop&port=443&secret=ee3a3365be03d6bc13518d65e70a3146c2617669746f2e7275
+https://t.me/proxy?server=wb.flowaccess.site&port=8443&secret=ee2fcc64ad41fc313d96fb8cb686e5620677622e666c6f776163636573732e73697465
 https://t.me/proxy?server=www.minetor.co.uk&port=443&secret=ee104462821249bd7ac519130220c25d09
 tg://socks?server=178.63.155.151&port=8888
 tg://socks?server=94.131.95.92&port=1080
