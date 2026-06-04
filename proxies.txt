@@ -52,6 +52,7 @@ https://t.me/proxy?server=mtp7.sosproxy.space&port=443&secret=ee77eea55483cdb42d
 https://t.me/proxy?server=network.nolags.pw&port=443&secret=dd8ee55939bfea58827fd6f140bca62a63
 https://t.me/proxy?server=peyk.acharbashi.info&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=promo.dealer.ac&port=443&secret=ee6aa3b7302162fefaffdcfafa34ab94ba7477656e7475722e636f6d
+https://t.me/proxy?server=proxy.digitalresistance.dog&port=443&secret=ddd41d8cd98f00b204e9800998ecf8427e
 https://t.me/proxy?server=proxy.dreamerlook.ru&port=444&secret=ee00000000000000000000000000000000766b2e636f6d
 https://t.me/proxy?server=pulse.flowstreamhub.site&port=8443&secret=ee993b027bf939e8b65e48c633930c8b6770756c73652e666c6f7773747265616d6875622e73697465
 https://t.me/proxy?server=r21.proxytg.space&port=8443&secret=eec5963870566a7e0d9a04f5f792d9faf47232312e70726f787974672e7370616365
