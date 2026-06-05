@@ -128,6 +128,7 @@ tg://socks?server=2.26.103.146&port=1080
 tg://socks?server=2.26.87.216&port=1080
 tg://socks?server=206.123.156.209&port=7159
 tg://socks?server=206.123.156.210&port=4093
+tg://socks?server=206.123.156.211&port=17683
 tg://socks?server=206.123.156.211&port=32924
 tg://socks?server=206.123.156.211&port=5220
 tg://socks?server=206.123.156.211&port=6676
