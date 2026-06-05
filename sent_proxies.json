@@ -143298,5 +143298,14 @@
     "message_id": 2228,
     "timestamp": 1780670332,
     "status": "active"
+  },
+  "mtproto|connect.arixo.shop|443|ee46636c0c3ff70a1d97ff70bb96ecd6ce617669746f2e7275": {
+    "ip": "connect.arixo.shop",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "ee46636c0c3ff70a1d97ff70bb96ecd6ce617669746f2e7275",
+    "message_id": 2229,
+    "timestamp": 1780671347,
+    "status": "active"
   }
 }
