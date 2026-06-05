@@ -50,6 +50,7 @@ https://t.me/proxy?server=turbo.quickrouteapp.xyz&port=8443&secret=ee7e87773423c
 https://t.me/proxy?server=turbovpn.obhod.fun&port=9443&secret=76706e76706e76706e76706e76706e76
 https://t.me/proxy?server=warsaw.nolags.pw&port=443&secret=dd68c2ee708b2e88d8d12802479d4d5026
 https://t.me/proxy?server=wave.flowaccess.site&port=8443&secret=eeea2f80ea6628006a3db2a8678d65bd07776176652e666c6f776163636573732e73697465
+https://t.me/proxy?server=www.minetor.co.uk&port=443&secret=dd79e7010200010007f0030386e24c3add
 tg://socks?server=104.128.142.191&port=1080
 tg://socks?server=109.135.16.145&port=49879
 tg://socks?server=109.73.173.199&port=1080
@@ -59,6 +60,7 @@ tg://socks?server=151.241.215.23&port=1080
 tg://socks?server=152.53.144.223&port=1080
 tg://socks?server=158.178.198.31&port=1080
 tg://socks?server=167.71.42.89&port=1080
+tg://socks?server=176.9.62.93&port=1080
 tg://socks?server=185.125.102.149&port=1080
 tg://socks?server=193.221.203.192&port=1080
 tg://socks?server=193.29.224.20&port=1080
