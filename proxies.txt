@@ -85,6 +85,7 @@ https://t.me/proxy?server=www.alo-otp.info.&port=25565&secret=ee104462821249bd7a
 https://t.me/proxy?server=www.minetor.co.uk&port=443&secret=dd79e7010200010007f0030386e24c3add
 tg://socks?server=104.128.142.191&port=1080
 tg://socks?server=104.219.236.127&port=1080
+tg://socks?server=109.120.187.233&port=1080
 tg://socks?server=109.135.16.145&port=49879
 tg://socks?server=109.73.173.199&port=1080
 tg://socks?server=134.122.1.61&port=11679
