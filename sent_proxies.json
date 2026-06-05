@@ -143775,5 +143775,14 @@
     "message_id": 2291,
     "timestamp": 1780698081,
     "status": "active"
+  },
+  "socks5|31.13.208.125|50080": {
+    "ip": "31.13.208.125",
+    "port": 50080,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 2292,
+    "timestamp": 1780698125,
+    "status": "active"
   }
 }
