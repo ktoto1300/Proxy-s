@@ -143784,5 +143784,14 @@
     "message_id": 2292,
     "timestamp": 1780698125,
     "status": "active"
+  },
+  "socks5|85.202.160.161|5555": {
+    "ip": "85.202.160.161",
+    "port": 5555,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 2293,
+    "timestamp": 1780698169,
+    "status": "active"
   }
 }
