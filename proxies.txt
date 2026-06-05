@@ -52,4 +52,6 @@ https://t.me/proxy?server=warsaw.nolags.pw&port=443&secret=dd68c2ee708b2e88d8d12
 https://t.me/proxy?server=wave.flowaccess.site&port=8443&secret=eeea2f80ea6628006a3db2a8678d65bd07776176652e666c6f776163636573732e73697465
 tg://socks?server=167.71.42.89&port=1080
 tg://socks?server=195.133.84.57&port=1080
+tg://socks?server=37.18.73.60&port=5566
+tg://socks?server=45.129.242.58&port=1080
 tg://socks?server=46.36.220.220&port=1080
