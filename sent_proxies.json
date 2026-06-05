@@ -41171,9 +41171,13 @@
     "status": "dead"
   },
   "socks5|206.123.156.234|11140": {
-    "message_id": 0,
-    "timestamp": 1780639704,
-    "status": "dead"
+    "ip": "206.123.156.234",
+    "port": 11140,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 2231,
+    "timestamp": 1780671577,
+    "status": "active"
   },
   "socks5|206.123.156.230|5196": {
     "message_id": 0,
