@@ -143440,5 +143440,14 @@
     "message_id": 2245,
     "timestamp": 1780680170,
     "status": "active"
+  },
+  "mtproto|rocket.flowaccess.site|443|ee03d3d1b9bda832390669bc06167720d8726f636b65742e666c6f776163636573732e73697465": {
+    "ip": "rocket.flowaccess.site",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "ee03d3d1b9bda832390669bc06167720d8726f636b65742e666c6f776163636573732e73697465",
+    "message_id": 2247,
+    "timestamp": 1780680603,
+    "status": "active"
   }
 }
