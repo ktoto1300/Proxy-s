@@ -68,6 +68,7 @@ tg://socks?server=206.123.156.210&port=5119
 tg://socks?server=206.123.156.213&port=8146
 tg://socks?server=206.123.156.227&port=5291
 tg://socks?server=206.123.156.231&port=7914
+tg://socks?server=43.165.6.179&port=1080
 tg://socks?server=45.61.188.134&port=44499
 tg://socks?server=45.91.236.58&port=1080
 tg://socks?server=46.36.220.220&port=1080
