@@ -121629,9 +121629,13 @@
     "status": "dead"
   },
   "socks5|144.124.232.204|5222": {
-    "message_id": 0,
-    "timestamp": 1780645786,
-    "status": "dead"
+    "ip": "144.124.232.204",
+    "port": 5222,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 2226,
+    "timestamp": 1780667402,
+    "status": "active"
   },
   "socks5|68.191.23.134|9200": {
     "message_id": 0,
