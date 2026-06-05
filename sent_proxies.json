@@ -143703,5 +143703,14 @@
     "message_id": 2283,
     "timestamp": 1780693501,
     "status": "active"
+  },
+  "mtproto|mt.nowaboost.com|853|4fd95a487c5c87ae82b6639a9b6b5ff2": {
+    "ip": "mt.nowaboost.com",
+    "port": 853,
+    "protocol": "mtproto",
+    "secret": "4fd95a487c5c87ae82b6639a9b6b5ff2",
+    "message_id": 2284,
+    "timestamp": 1780695064,
+    "status": "active"
   }
 }
