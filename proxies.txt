@@ -45,7 +45,10 @@ https://t.me/proxy?server=s01.neo-trading.org&port=443&secret=ee7391242569590e01
 https://t.me/proxy?server=s02.neo-trading.org&port=443&secret=ee6ec9f7e082baf2397b450727ce78447e6f7a6f6e2e7275
 https://t.me/proxy?server=s03.neo-trading.org&port=443&secret=eee4bdd862b817da34a7bae5a15d71bd93766b2e636f6d
 https://t.me/proxy?server=spain.nolags.pw&port=443&secret=ddda11050e6e98fb151d0094b549b0344a
+https://t.me/proxy?server=starsvpn.obhod.fun&port=6443&secret=76706e76706e76706e76706e76706e76
 https://t.me/proxy?server=surf.flowaccess.site&port=8443&secret=eeea26c2508652bcbd35ac3116045eb939737572662e666c6f776163636573732e73697465
 https://t.me/proxy?server=turbo.quickrouteapp.xyz&port=8443&secret=ee7e87773423c90bb0792a4e005f54119d747572626f2e717569636b726f7574656170702e78797a
 https://t.me/proxy?server=warsaw.nolags.pw&port=443&secret=dd68c2ee708b2e88d8d12802479d4d5026
 https://t.me/proxy?server=wave.flowaccess.site&port=8443&secret=eeea2f80ea6628006a3db2a8678d65bd07776176652e666c6f776163636573732e73697465
+tg://socks?server=149.62.186.244&port=1080
+tg://socks?server=46.36.220.220&port=1080
