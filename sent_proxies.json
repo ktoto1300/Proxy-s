@@ -135909,9 +135909,13 @@
     "status": "dead"
   },
   "socks5|206.123.156.238|8366": {
-    "message_id": 0,
-    "timestamp": 1780662953,
-    "status": "dead"
+    "ip": "206.123.156.238",
+    "port": 8366,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 2264,
+    "timestamp": 1780684576,
+    "status": "active"
   },
   "socks5|206.123.156.231|7605": {
     "message_id": 0,
