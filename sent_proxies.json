@@ -143338,5 +143338,14 @@
     "message_id": 2233,
     "timestamp": 1780671885,
     "status": "active"
+  },
+  "socks5|206.123.156.234|11202": {
+    "ip": "206.123.156.234",
+    "port": 11202,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 2234,
+    "timestamp": 1780671972,
+    "status": "active"
   }
 }
