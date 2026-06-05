@@ -143555,5 +143555,14 @@
     "message_id": 2261,
     "timestamp": 1780681976,
     "status": "active"
+  },
+  "mtproto|sonic.quickrouteapp.xyz|443|eebd8b54149182b64d403ef9c5141fc3ee736f6e69632e717569636b726f7574656170702e78797a": {
+    "ip": "sonic.quickrouteapp.xyz",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "eebd8b54149182b64d403ef9c5141fc3ee736f6e69632e717569636b726f7574656170702e78797a",
+    "message_id": 2262,
+    "timestamp": 1780684211,
+    "status": "active"
   }
 }
