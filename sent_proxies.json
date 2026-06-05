@@ -143685,5 +143685,14 @@
     "message_id": 2281,
     "timestamp": 1780690341,
     "status": "active"
+  },
+  "mtproto|highspeed.nolags.pw|443|dd6e87000d80db522523b5ab5bb58ab3af": {
+    "ip": "highspeed.nolags.pw",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "dd6e87000d80db522523b5ab5bb58ab3af",
+    "message_id": 2282,
+    "timestamp": 1780691280,
+    "status": "active"
   }
 }
