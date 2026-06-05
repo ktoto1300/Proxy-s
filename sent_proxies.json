@@ -105873,9 +105873,13 @@
     "status": "dead"
   },
   "socks5|206.123.156.229|7842": {
-    "message_id": 0,
-    "timestamp": 1780645467,
-    "status": "dead"
+    "ip": "206.123.156.229",
+    "port": 7842,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 2248,
+    "timestamp": 1780680611,
+    "status": "active"
   },
   "socks5|213.230.121.41|1080": {
     "message_id": 0,
