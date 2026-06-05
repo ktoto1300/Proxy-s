@@ -143694,5 +143694,14 @@
     "message_id": 2282,
     "timestamp": 1780691280,
     "status": "active"
+  },
+  "socks5|47.252.47.39|1080": {
+    "ip": "47.252.47.39",
+    "port": 1080,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 2283,
+    "timestamp": 1780693501,
+    "status": "active"
   }
 }
