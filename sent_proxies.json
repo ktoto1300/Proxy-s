@@ -143409,5 +143409,14 @@
     "message_id": 2242,
     "timestamp": 1780672768,
     "status": "active"
+  },
+  "mtproto|second.nolags.pw|443|ddf4fa8f92de56cde758429546586eaac8": {
+    "ip": "second.nolags.pw",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "ddf4fa8f92de56cde758429546586eaac8",
+    "message_id": 2243,
+    "timestamp": 1780677026,
+    "status": "active"
   }
 }
