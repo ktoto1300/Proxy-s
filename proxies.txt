@@ -102,6 +102,7 @@ tg://socks?server=167.71.42.89&port=1080
 tg://socks?server=185.125.102.149&port=1080
 tg://socks?server=188.93.140.146&port=1080
 tg://socks?server=206.123.156.219&port=7012
+tg://socks?server=206.123.156.220&port=8332
 tg://socks?server=206.123.156.220&port=8333
 tg://socks?server=206.123.156.225&port=9459
 tg://socks?server=43.165.6.179&port=1080
