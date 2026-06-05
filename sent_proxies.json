@@ -143242,5 +143242,14 @@
     "message_id": 2217,
     "timestamp": 1780664479,
     "status": "active"
+  },
+  "mtproto|vktop.chunkycorp.shop|443|ee3a3365be03d6bc13518d65e70a3146c2617669746f2e7275": {
+    "ip": "vktop.chunkycorp.shop",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "ee3a3365be03d6bc13518d65e70a3146c2617669746f2e7275",
+    "message_id": 2220,
+    "timestamp": 1780666217,
+    "status": "active"
   }
 }
