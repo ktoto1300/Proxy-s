@@ -122553,9 +122553,13 @@
     "status": "dead"
   },
   "socks5|206.123.156.238|6700": {
-    "message_id": 0,
-    "timestamp": 1780645789,
-    "status": "dead"
+    "ip": "206.123.156.238",
+    "port": 6700,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 2252,
+    "timestamp": 1780680919,
+    "status": "active"
   },
   "socks5|168.93.3.98|10232": {
     "message_id": 0,
