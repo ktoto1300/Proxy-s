@@ -56,10 +56,10 @@ tg://socks?server=151.241.215.23&port=1080
 tg://socks?server=152.53.144.223&port=1080
 tg://socks?server=158.178.198.31&port=1080
 tg://socks?server=167.71.42.89&port=1080
+tg://socks?server=185.125.102.149&port=1080
 tg://socks?server=193.221.203.192&port=1080
 tg://socks?server=195.133.84.57&port=1080
 tg://socks?server=206.123.156.220&port=4894
-tg://socks?server=206.123.156.231&port=9058
 tg://socks?server=206.123.156.232&port=8183
 tg://socks?server=37.18.73.60&port=5566
 tg://socks?server=45.129.242.58&port=1080
