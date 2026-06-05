@@ -184,6 +184,7 @@ tg://socks?server=206.123.156.234&port=6407
 tg://socks?server=206.123.156.234&port=6840
 tg://socks?server=206.123.156.234&port=9311
 tg://socks?server=206.123.156.236&port=6105
+tg://socks?server=206.123.156.238&port=6121
 tg://socks?server=206.123.156.238&port=6700
 tg://socks?server=206.123.156.238&port=6791
 tg://socks?server=206.123.156.238&port=8366
