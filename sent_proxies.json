@@ -103032,9 +103032,13 @@
     "status": "dead"
   },
   "socks5|206.123.156.234|9311": {
-    "message_id": 0,
-    "timestamp": 1780645425,
-    "status": "dead"
+    "ip": "206.123.156.234",
+    "port": 9311,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 2225,
+    "timestamp": 1780667051,
+    "status": "active"
   },
   "socks5|206.123.156.238|7845": {
     "message_id": 0,
