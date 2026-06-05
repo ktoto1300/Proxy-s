@@ -54794,9 +54794,13 @@
     "status": "dead"
   },
   "socks5|206.123.156.223|5580": {
-    "message_id": 0,
-    "timestamp": 1780640121,
-    "status": "dead"
+    "ip": "206.123.156.223",
+    "port": 5580,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 2253,
+    "timestamp": 1780680963,
+    "status": "active"
   },
   "socks5|206.123.156.219|6043": {
     "message_id": 0,
