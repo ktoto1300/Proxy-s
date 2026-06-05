@@ -107665,9 +107665,13 @@
     "status": "dead"
   },
   "socks5|78.63.115.20|8899": {
-    "message_id": 0,
-    "timestamp": 1780645507,
-    "status": "dead"
+    "ip": "78.63.115.20",
+    "port": 8899,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 2278,
+    "timestamp": 1780690166,
+    "status": "active"
   },
   "socks5|160.30.110.236|8082": {
     "message_id": 0,
