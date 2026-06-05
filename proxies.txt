@@ -100,6 +100,7 @@ tg://socks?server=109.71.246.44&port=1080
 tg://socks?server=109.73.173.199&port=1080
 tg://socks?server=147.45.76.207&port=8080
 tg://socks?server=151.241.215.23&port=1080
+tg://socks?server=158.178.198.31&port=1080
 tg://socks?server=167.71.42.89&port=1080
 tg://socks?server=185.125.102.149&port=1080
 tg://socks?server=188.93.140.146&port=1080
@@ -108,10 +109,12 @@ tg://socks?server=206.123.156.220&port=8332
 tg://socks?server=206.123.156.220&port=8333
 tg://socks?server=206.123.156.225&port=9459
 tg://socks?server=206.123.156.230&port=4879
+tg://socks?server=206.123.156.230&port=7282
 tg://socks?server=43.165.6.179&port=1080
 tg://socks?server=45.89.111.139&port=1082
 tg://socks?server=45.89.111.19&port=1082
 tg://socks?server=5.255.103.55&port=1080
 tg://socks?server=85.155.96.109&port=1080
+tg://socks?server=89.124.113.193&port=1080
 tg://socks?server=90.156.229.56&port=1234
 tg://socks?server=94.131.95.92&port=1080
