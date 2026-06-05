@@ -53,4 +53,7 @@ https://t.me/proxy?server=wave.flowaccess.site&port=8443&secret=eeea2f80ea662800
 tg://socks?server=109.73.173.199&port=1080
 tg://socks?server=149.62.186.244&port=1080
 tg://socks?server=167.71.42.89&port=1080
+tg://socks?server=206.123.156.223&port=5946
+tg://socks?server=206.123.156.223&port=7954
 tg://socks?server=5.255.103.55&port=1080
+tg://socks?server=94.159.106.252&port=1080
