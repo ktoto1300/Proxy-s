@@ -95957,9 +95957,13 @@
     "status": "dead"
   },
   "socks5|45.140.169.241|1081": {
-    "message_id": 0,
-    "timestamp": 1780645245,
-    "status": "dead"
+    "ip": "45.140.169.241",
+    "port": 1081,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 2223,
+    "timestamp": 1780666875,
+    "status": "active"
   },
   "socks5|206.123.156.222|7596": {
     "message_id": 0,
