@@ -10128,9 +10128,13 @@
     "status": "dead"
   },
   "socks5|206.123.156.222|6041": {
-    "message_id": 0,
-    "timestamp": 1780638748,
-    "status": "dead"
+    "ip": "206.123.156.222",
+    "port": 6041,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 2275,
+    "timestamp": 1780689812,
+    "status": "active"
   },
   "socks5|206.123.156.222|5854": {
     "message_id": 0,
