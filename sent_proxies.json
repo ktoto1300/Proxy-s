@@ -143667,5 +143667,14 @@
     "message_id": 2279,
     "timestamp": 1780690210,
     "status": "active"
+  },
+  "mtproto|178.105.232.49|8443|dd104462821249bd7ac519130220c25d09": {
+    "ip": "178.105.232.49",
+    "port": 8443,
+    "protocol": "mtproto",
+    "secret": "dd104462821249bd7ac519130220c25d09",
+    "message_id": 2280,
+    "timestamp": 1780690335,
+    "status": "active"
   }
 }
