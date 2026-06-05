@@ -34420,9 +34420,13 @@
     "status": "dead"
   },
   "socks5|50.114.206.152|5555": {
-    "message_id": 0,
-    "timestamp": 1780639494,
-    "status": "dead"
+    "ip": "50.114.206.152",
+    "port": 5555,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 2265,
+    "timestamp": 1780686127,
+    "status": "active"
   },
   "socks5|103.130.114.205|39163": {
     "message_id": 0,
