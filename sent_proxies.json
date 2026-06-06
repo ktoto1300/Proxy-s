@@ -143968,5 +143968,14 @@
     "message_id": 2318,
     "timestamp": 1780720235,
     "status": "active"
+  },
+  "mtproto|51.250.68.27|443|ee10dcdfea7fbd6d3d654d2262bb054000617669746f2e7275": {
+    "ip": "51.250.68.27",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "ee10dcdfea7fbd6d3d654d2262bb054000617669746f2e7275",
+    "message_id": 2319,
+    "timestamp": 1780723801,
+    "status": "active"
   }
 }
