@@ -143941,5 +143941,14 @@
     "message_id": 2315,
     "timestamp": 1780719367,
     "status": "active"
+  },
+  "socks5|31.40.204.188|443": {
+    "ip": "31.40.204.188",
+    "port": 443,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 2316,
+    "timestamp": 1780719852,
+    "status": "active"
   }
 }
