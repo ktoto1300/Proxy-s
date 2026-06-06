@@ -21662,9 +21662,13 @@
     "status": "dead"
   },
   "socks5|169.40.6.114|1080": {
-    "message_id": 0,
-    "timestamp": 1780639091,
-    "status": "dead"
+    "ip": "169.40.6.114",
+    "port": 1080,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 2304,
+    "timestamp": 1780713884,
+    "status": "active"
   },
   "socks5|176.126.164.213|80": {
     "message_id": 0,
