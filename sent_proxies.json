@@ -101661,9 +101661,13 @@
     "status": "dead"
   },
   "socks5|185.196.61.251|1080": {
-    "message_id": 0,
-    "timestamp": 1780645386,
-    "status": "dead"
+    "ip": "185.196.61.251",
+    "port": 1080,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 2321,
+    "timestamp": 1780725001,
+    "status": "active"
   },
   "socks5|206.123.156.213|4107": {
     "message_id": 0,
