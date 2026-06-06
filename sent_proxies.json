@@ -126676,9 +126676,13 @@
     "status": "dead"
   },
   "socks5|185.210.85.26|56981": {
-    "message_id": 0,
-    "timestamp": 1780646291,
-    "status": "dead"
+    "ip": "185.210.85.26",
+    "port": 56981,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 2320,
+    "timestamp": 1780724674,
+    "status": "active"
   },
   "socks5|20.240.200.86|8080": {
     "message_id": 0,
