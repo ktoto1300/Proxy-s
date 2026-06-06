@@ -1,6 +1,6 @@
 {
   "total_proxies_found": 28,
-  "total_proxies_sent": 1,
+  "total_proxies_sent": 2,
   "total_proxies_deleted": 28,
   "total_active_currently": 33,
   "best_proxy": {
@@ -21,5 +21,5 @@
     "protocol": "mtproto",
     "secret": "dd79e344818749bd7ac519130220c25d09"
   },
-  "последний_запуск": "2026-05-28 23:24:11 МСК"
+  "последний_запуск": "2026-05-28 23:24:11 РњРЎРљ"
 }
