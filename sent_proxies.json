@@ -143985,5 +143985,14 @@
     "message_id": 2319,
     "timestamp": 1780723801,
     "status": "active"
+  },
+  "mtproto|post.my-miner.info.|8443|7gggggggggggggggggggggh0cmFuc2xhdGUuZ29v": {
+    "ip": "post.my-miner.info.",
+    "port": 8443,
+    "protocol": "mtproto",
+    "secret": "7gggggggggggggggggggggh0cmFuc2xhdGUuZ29v",
+    "message_id": 2322,
+    "timestamp": 1780726415,
+    "status": "active"
   }
 }
