@@ -110,6 +110,7 @@ tg://socks?server=144.124.232.204&port=443
 tg://socks?server=144.124.232.204&port=5222
 tg://socks?server=144.124.241.133&port=2080
 tg://socks?server=144.31.195.16&port=1080
+tg://socks?server=144.31.230.156&port=1080
 tg://socks?server=144.31.235.124&port=1080
 tg://socks?server=144.91.83.39&port=9050
 tg://socks?server=147.45.221.62&port=1080
