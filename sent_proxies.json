@@ -143861,5 +143861,14 @@
     "message_id": 2305,
     "timestamp": 1780713928,
     "status": "active"
+  },
+  "socks5|144.124.241.133|2080": {
+    "ip": "144.124.241.133",
+    "port": 2080,
+    "protocol": "socks5",
+    "secret": "",
+    "message_id": 2306,
+    "timestamp": 1780714190,
+    "status": "active"
   }
 }
