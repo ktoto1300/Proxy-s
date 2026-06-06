@@ -90,9 +90,13 @@
     "status": "dead"
   },
   "mtproto|vaslshid.co.uk.|85|FgMBAgABAAH8AxOG4kw63Q%3D%3D": {
-    "message_id": 0,
-    "timestamp": 1780662355,
-    "status": "dead"
+    "ip": "vaslshid.co.uk.",
+    "port": 85,
+    "protocol": "mtproto",
+    "secret": "FgMBAgABAAH8AxOG4kw63Q%3D%3D",
+    "message_id": 2297,
+    "timestamp": 1780705608,
+    "status": "active"
   },
   "mtproto|93.185.167.212|443|ee1c88677acf461e09e68f4ff0cef5724a617669746f2e7275": {
     "message_id": 0,
