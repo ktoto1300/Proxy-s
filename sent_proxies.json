@@ -138,9 +138,13 @@
     "status": "active"
   },
   "mtproto|connect.chunkycorp.shop|443|ee3a3365be03d6bc13518d65e70a3146c2617669746f2e7275": {
-    "message_id": 0,
-    "timestamp": 1780662352,
-    "status": "dead"
+    "ip": "connect.chunkycorp.shop",
+    "port": 443,
+    "protocol": "mtproto",
+    "secret": "ee3a3365be03d6bc13518d65e70a3146c2617669746f2e7275",
+    "message_id": 2296,
+    "timestamp": 1780705602,
+    "status": "active"
   },
   "mtproto|166.0.122.22|4515|eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d": {
     "ip": "166.0.122.22",
