@@ -45,6 +45,7 @@ https://t.me/proxy?server=api.my-miner.info.&port=8443&secret=7ggggggggggggggggg
 https://t.me/proxy?server=big.shahidpaper.site&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=blaze.flowaccess.site&port=443&secret=eec799e0af5c33d8ffc2310d4f0154379c626c617a652e666c6f776163636573732e73697465
 https://t.me/proxy?server=boost.flowstreamhub.site&port=8443&secret=ee7ee0a641b78ecc8d210e47981904a50a626f6f73742e666c6f7773747265616d6875622e73697465
+https://t.me/proxy?server=connect.arixo.shop&port=443&secret=ee3ccfb5178a6607b7e3818dc4dc9813fa617669746f2e7275
 https://t.me/proxy?server=connect.arixo.shop&port=443&secret=ee46636c0c3ff70a1d97ff70bb96ecd6ce617669746f2e7275
 https://t.me/proxy?server=connect.arixo.shop&port=443&secret=eeed5518514cf40187d905c5b7c9e4d595617669746f2e7275
 https://t.me/proxy?server=connect.chunkycorp.shop&port=443&secret=ee3a3365be03d6bc13518d65e70a3146c2617669746f2e7275
