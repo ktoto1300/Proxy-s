@@ -1,4 +1,5 @@
 142.54.237.38:4145
+165.232.49.16:1080
 171.25.158.95:1080
 184.170.249.65:4145
 24.249.199.12:4145
@@ -62,6 +63,7 @@ https://t.me/proxy?server=mash.drproxy.pro&port=443&secret=dda5a7b5711e648c7bd53
 https://t.me/proxy?server=mc-ssh.t-proxyru.info.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d
 https://t.me/proxy?server=moh.kingproxynewdomailasiatech.ink&port=25565&secret=FgMBAgABAAH8AxOG4kw63Q
 https://t.me/proxy?server=mtp-roto.road-digger.info.&port=2053&secret=7gggggggggggggggggggggh0cmFuc2xhdGUuZ29v
+https://t.me/proxy?server=peyk.acharbashi.info&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=post.my-miner.info.&port=8443&secret=7gggggggggggggggggggggh0cmFuc2xhdGUuZ29v
 https://t.me/proxy?server=protocol.fast-mt.info&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=proxy.arixo.shop&port=443&secret=ee2d3817c6b2bf469fb5064e6cb4b19790617669746f2e7275
@@ -78,6 +80,7 @@ https://t.me/proxy?server=waves.nolags.pw&port=443&secret=dd0208abd7e65df801ec05
 https://t.me/proxy?server=web.my-miner.info.&port=61016&secret=7nnnAQIAAQAH8AMDhuJMOt0%3D
 https://t.me/proxy?server=www.alp-drtop.info&port=443&secret=ddf0eeb0bd9adc4fd4a93994ee3b2a216b
 https://t.me/proxy?server=xyz.chunkycorp.shop&port=443&secret=eec83a5746fa7a58916451e37d81bdcb2c617669746f2e7275
+https://t.me/proxy?server=yard-yaystal-menyat.yard-tg-bot.online&port=443&secret=ee6a441d3845f1bfec1100662ce671d8ed76762e636f6d
 https://t.me/proxy?server=yc1.indigogift.fun&port=443&secret=ee0e61aaf45658c3ef5fc0fef90549fda67777772e636c6f7564666c6172652e636f6d
 https://t.me/proxy?server=yc2.indigogift.fun&port=443&secret=ee0e61aaf45658c3ef5fc0fef90549fda67777772e636c6f7564666c6172652e636f6d
 https://t.me/proxy?server=zoom.flowaccess.site&port=443&secret=ee50179d3cf3b7e3600efe3b6001fa35c07a6f6f6d2e666c6f776163636573732e73697465
