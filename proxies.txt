@@ -1,4 +1,5 @@
 142.54.237.38:4145
+165.232.49.16:1080
 184.170.249.65:4145
 24.249.199.12:4145
 24.249.199.4:4145
@@ -46,11 +47,13 @@ https://t.me/proxy?server=conn-now.tpro-ru.info&port=443&secret=ddf0eeb0bd9adc4f
 https://t.me/proxy?server=connect.arixo.shop&port=443&secret=ee3ccfb5178a6607b7e3818dc4dc9813fa617669746f2e7275
 https://t.me/proxy?server=connect.chunkycorp.shop&port=443&secret=ee3a3365be03d6bc13518d65e70a3146c2617669746f2e7275
 https://t.me/proxy?server=dash.flowstreamhub.site&port=443&secret=eee5860e3a92504e57496b5748749921d3646173682e666c6f7773747265616d6875622e73697465
-https://t.me/proxy?server=dedicated.love-internet.xyz&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=exp.proxy.digitalresistance.dog&port=443&secret=7tQdjNmPALIE6YAJmOz4Mi53d3cuZ29vZ2xlLmNvbQ
 https://t.me/proxy?server=fool.feel-fly.info&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=fresh-c.gamelande.info.&port=25565&secret=ee0000f00f0f775555fffffff5006e2e6963646e2e79656b74616e65742e636f6d
+https://t.me/proxy?server=gem.alotaxi.info&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d
+https://t.me/proxy?server=ghtash.co.uk&port=9965&secret=dd104462821249bd7ac519130220c25d09
 https://t.me/proxy?server=hamrah.net-sabet.adadb-1hgujoiah-xy1xutr095-tk.info.&port=1080&secret=79e344818749bd7ac519130220c25d09
+https://t.me/proxy?server=hermeop.remotewire.net&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e6d656469612e737465616d706f77657265642e636f6d
 https://t.me/proxy?server=highspeed.nolags.pw&port=443&secret=dd6e87000d80db522523b5ab5bb58ab3af
 https://t.me/proxy?server=ice.nolags.pw&port=443&secret=dd53df731994a1368ad70990c9a88794dd
 https://t.me/proxy?server=info.proxytime.info&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
@@ -61,11 +64,11 @@ https://t.me/proxy?server=mash.drproxy.pro&port=443&secret=dda5a7b5711e648c7bd53
 https://t.me/proxy?server=mc-ssh.t-proxyru.info.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d
 https://t.me/proxy?server=moh.kingproxynewdomailasiatech.ink&port=25565&secret=FgMBAgABAAH8AxOG4kw63Q
 https://t.me/proxy?server=mtp-roto.road-digger.info.&port=2053&secret=7gggggggggggggggggggggh0cmFuc2xhdGUuZ29v
-https://t.me/proxy?server=peyk.acharbashi.info&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=post.my-miner.info.&port=8443&secret=7gggggggggggggggggggggh0cmFuc2xhdGUuZ29v
 https://t.me/proxy?server=protocol.fast-mt.info&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=proxy.arixo.shop&port=443&secret=ee2d3817c6b2bf469fb5064e6cb4b19790617669746f2e7275
 https://t.me/proxy?server=proxy.digitalresistance.dog&port=443&secret=ddd41d8cd98f00b204e9800998ecf8427e
+https://t.me/proxy?server=rapid.quickrouteapp.xyz&port=443&secret=eef759f32d70c17cef76b34ab18561ff7972617069642e717569636b726f7574656170702e78797a
 https://t.me/proxy?server=russia.arixo.shop&port=443&secret=eed015b7c384e8023672d5355b0bb6e531617669746f2e7275
 https://t.me/proxy?server=russia.chunkycorp.shop&port=443&secret=ee3a3365be03d6bc13518d65e70a3146c2617669746f2e7275
 https://t.me/proxy?server=s01.neo-trading.org&port=443&secret=ee7391242569590e01416101927d38b565646e732d73686f702e7275
