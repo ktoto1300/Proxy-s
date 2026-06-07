@@ -1,8 +1,8 @@
 184.170.249.65:4145
 24.249.199.12:4145
 24.249.199.4:4145
+47.251.127.154:1080
 https://t.me/proxy?server=103.161.35.56&port=443&secret=3XnnAQIAAQAH8AMDhuJMOt0
-https://t.me/proxy?server=132.243.213.221&port=443&secret=ee4d3cf6b01fed616495b9651ebe37313f766b2e7275
 https://t.me/proxy?server=159.69.100.158&port=443&secret=f0eeb0bd9adc4fd4a93994ee3b2a216b
 https://t.me/proxy?server=166.0.122.22&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=166.88.171.15&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d
@@ -19,6 +19,7 @@ https://t.me/proxy?server=49.13.69.17&port=443&secret=ee1603010200010001fc030386
 https://t.me/proxy?server=5.75.203.37&port=443&secret=3XnnAQIAAQAH8AMDhuJMOt0
 https://t.me/proxy?server=51.83.226.39&port=1443&secret=eed0d6e111bada5511fcce9584deadbeef73332e616d617a6f6e61777
 https://t.me/proxy?server=65.108.50.120&port=443&secret=dd104462821249bd7ac519130220c25d09
+https://t.me/proxy?server=65.109.106.132&port=443&secret=3XnnAQIAAQAH8AMDhuJMOt0
 https://t.me/proxy?server=65.109.245.52&port=7980&secret=ddf0eeb0bd9adc4fd4a93994ee3b2a216b
 https://t.me/proxy?server=65.109.254.108&port=443&secret=ddf0eeb0bd9adc4fd4a93994ee3b2a216b
 https://t.me/proxy?server=65.21.205.37&port=443&secret=3XnnAQIAAQAH8AMDhuJMOt0
@@ -72,7 +73,6 @@ https://t.me/proxy?server=s03.neo-trading.org&port=443&secret=eee4bdd862b817da34
 https://t.me/proxy?server=second.nolags.pw&port=443&secret=ddf4fa8f92de56cde758429546586eaac8
 https://t.me/proxy?server=sonic.quickrouteapp.xyz&port=443&secret=eebd8b54149182b64d403ef9c5141fc3ee736f6e69632e717569636b726f7574656170702e78797a
 https://t.me/proxy?server=swift.proxyobhod.online&port=443&secret=eed25a52433fbaaea5848141bf382bf38073776966742e70726f78796f62686f642e6f6e6c696e65
-https://t.me/proxy?server=turbo.proxytelega.store&port=443&secret=eedb7eda819ee3499ac5f5d2a8803be174747572626f2e70726f787974656c6567612e73746f7265
 https://t.me/proxy?server=vaslshid.co.uk.&port=85&secret=FgMBAgABAAH8AxOG4kw63Q%3D%3D
 https://t.me/proxy?server=waves.nolags.pw&port=443&secret=dd0208abd7e65df801ec0550d8ba07c1b3
 https://t.me/proxy?server=web.my-miner.info.&port=61016&secret=7nnnAQIAAQAH8AMDhuJMOt0%3D
