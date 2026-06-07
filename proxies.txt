@@ -1,5 +1,4 @@
 107.181.161.81:4145
-184.185.2.12:4145
 192.252.214.17:4145
 192.252.216.81:4145
 24.249.199.12:4145
@@ -53,6 +52,7 @@ https://t.me/proxy?server=fresh-c.gamelande.info.&port=25565&secret=ee0000f00f0f
 https://t.me/proxy?server=fresh.t-proxy.info.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d
 https://t.me/proxy?server=ghtash.co.uk&port=9965&secret=dd104462821249bd7ac519130220c25d09
 https://t.me/proxy?server=hamrah.net-sabet.adadb-1hgujoiah-xy1xutr095-tk.info.&port=1080&secret=79e344818749bd7ac519130220c25d09
+https://t.me/proxy?server=hermeop.remotewire.net&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e6d656469612e737465616d706f77657265642e636f6d
 https://t.me/proxy?server=ice.nolags.pw&port=443&secret=dd53df731994a1368ad70990c9a88794dd
 https://t.me/proxy?server=iran.proxytime.info&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=iro.3utilities.com&port=443&secret=fb175d6d7f820cdc73ab11edbdcdbd74
