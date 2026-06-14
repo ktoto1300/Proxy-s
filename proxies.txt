@@ -1,7 +1,4 @@
-24.249.199.12:4145
-24.249.199.4:4145
 5.255.117.127:1080
-67.201.33.10:25283
 https://t.me/proxy?server=144.225.243.11&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=144.225.243.119&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=166.0.122.22&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d
@@ -78,6 +75,7 @@ https://t.me/proxy?server=pub.rkn.dog&port=443&secret=eecd8f55ad4cc566f6ab7faaa6
 https://t.me/proxy?server=relay.nowabst.net&port=853&secret=ee19f4ad26c65891fd22cf3b7a59f0d1036164732e78352e7275
 https://t.me/proxy?server=relay.prx.today&port=443&secret=eec68955d36d7f04a4ad1b6b0e82c7baeb72656c61792e7072782e746f646179
 https://t.me/proxy?server=s01.neo-trading.org&port=443&secret=ee7391242569590e01416101927d38b565646e732d73686f702e7275
+https://t.me/proxy?server=s03.neo-trading.org&port=443&secret=eee4bdd862b817da34a7bae5a15d71bd93766b2e636f6d
 https://t.me/proxy?server=secure.proxyz.site&port=443&secret=ee6971f00b20112546804a9453a1a13fde7365637572652e70726f78797a2e73697465
 https://t.me/proxy?server=server.mizbanonline.info&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d
 https://t.me/proxy?server=static.prxtoday.store&port=443&secret=ee3740849efd941157c45810d974fd66097374617469632e707278746f6461792e73746f7265
