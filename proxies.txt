@@ -1,5 +1,4 @@
-138.199.25.13:3909
-184.185.2.12:4145
+194.87.55.194:2053
 24.249.199.12:4145
 24.249.199.4:4145
 https://t.me/proxy?server=144.225.243.11&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d
@@ -71,5 +70,6 @@ https://t.me/proxy?server=server.mizbanonline.info&port=443&secret=ee16030102000
 https://t.me/proxy?server=vpn.prxtoday.store&port=443&secret=ee29260362b2497c092e631593a534e5a376706e2e707278746f6461792e73746f7265
 https://t.me/proxy?server=web.prxtoday.store&port=443&secret=ee7a5660b84770213722fe3581bcb17faa7765622e707278746f6461792e73746f7265
 https://t.me/proxy?server=wgwg.etherealvpn.uk&port=443&secret=ee3b7ca716f61b904f00c0f93d9419de06617669746f2e7275
+https://t.me/proxy?server=www.tproxy.monster&port=2053&secret=ee104462821249bd7ac519130220c25d09617669746f2e7275
 https://t.me/proxy?server=www2.nilmart.ir&port=443&secret=ee0000f00f0f775555fffffff5006e2e69626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=yc3.indigogift.fun&port=443&secret=ee0e61aaf45658c3ef5fc0fef90549fda67777772e636c6f7564666c6172652e636f6d
