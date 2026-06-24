@@ -29,6 +29,7 @@ https://t.me/proxy?server=ad1.arixo.shop&port=443&secret=eee09f46368021f91b92ad3
 https://t.me/proxy?server=ad2.arixo.shop&port=443&secret=eed09b88cbbd4e744865b890e5a0bd26876164322e617269786f2e73686f70
 https://t.me/proxy?server=b8rta.co.uk.&port=443&secret=ddf0eeb0bd9adc4fd4a93994ee3b2a216b
 https://t.me/proxy?server=best-sellerst.co.uk.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d
+https://t.me/proxy?server=billing.mizbanonline.info&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d
 https://t.me/proxy?server=cab.proxytg.live&port=443&secret=ee172f5214b57f137805957e350d01e0946361622e70726f787974672e6c697665
 https://t.me/proxy?server=cdn.savelyev.click&port=443&secret=ee16fa5356dcb833ae6b28d954fb70e08263646e2e736176656c7965762e636c69636b
 https://t.me/proxy?server=cdn.toconvel.digital&port=443&secret=eeefd9942127c0d394cb6c83aa9aea57b863646e2e746f636f6e76656c2e6469676974616c
@@ -57,7 +58,6 @@ https://t.me/proxy?server=mash.drproxy.pro&port=443&secret=dda5a7b5711e648c7bd53
 https://t.me/proxy?server=mc-ssh.t-proxyru.info.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d
 https://t.me/proxy?server=melat.managep.info&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d
 https://t.me/proxy?server=mesh.nowabst.net&port=853&secret=ee563d60b964695b7bee8b6525b4be45636164732e78352e7275
-https://t.me/proxy?server=mizban-dade-online.genuismind.info&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d
 https://t.me/proxy?server=openhostings.co.uk.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d
 https://t.me/proxy?server=panel-portal.managep.info&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d
 https://t.me/proxy?server=pmcdin.co.uk.&port=443&secret=ddf0eeb0bd9adc4fd4a93994ee3b2a216b
