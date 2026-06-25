@@ -1,3 +1,4 @@
+https://t.me/proxy?server=138.124.33.176&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=138.201.192.170&port=88&secret=ee0000f00f0f775555fffffff5006e2e69626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=144.225.243.11&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=144.225.243.119&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d
@@ -36,7 +37,6 @@ https://t.me/proxy?server=b8rta.co.uk.&port=443&secret=ddf0eeb0bd9adc4fd4a93994e
 https://t.me/proxy?server=best-sellerst.co.uk.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d
 https://t.me/proxy?server=billing.mizbanonline.info&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d
 https://t.me/proxy?server=br.nowabst.net&port=853&secret=ee5a281fcc91f7ec3ce293d643395222ad6164732e78352e7275
-https://t.me/proxy?server=cab.proxytg.live&port=443&secret=ee172f5214b57f137805957e350d01e0946361622e70726f787974672e6c697665
 https://t.me/proxy?server=cdn.toconvel.digital&port=443&secret=ee8914fddd76fcf81589e32f7044f2ef3c63646e2e746f636f6e76656c2e6469676974616c
 https://t.me/proxy?server=cdn3.neo-trading.org&port=443&secret=eebddd26d28f5c8fd5fb3c1c5d1a57738e706574726f766963682e7275
 https://t.me/proxy?server=cdn5.neo-trading.org&port=443&secret=eee90a78bc2f09b9ae56119674c98ac213706574726f766963682e7275
