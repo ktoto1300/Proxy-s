@@ -70,7 +70,6 @@ https://t.me/proxy?server=s03.neo-trading.org&port=443&secret=eee4bdd862b817da34
 https://t.me/proxy?server=s04.neo-trading.org&port=8443&secret=ee9212c14bf99d751c68a80592229d677e6d656469612e737465616d706f77657265642e636f6d
 https://t.me/proxy?server=secure.gorbushkin.click&port=443&secret=eebbf55b9bfecba7ac5fd1e437a7a632447365637572652e676f72627573686b696e2e636c69636b
 https://t.me/proxy?server=server.mizbanonline.info&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d
-https://t.me/proxy?server=sr1.loveproxy.xyz&port=443&secret=eef334baa1cb1e7ca5cf1a48e461b5dbfa62726f777365722e79616e6465782e636f6d
 https://t.me/proxy?server=sr2.loveproxy.xyz&port=443&secret=ee740cf3f67125ac3f478ea83b10c0b20a62726f777365722e79616e6465782e636f6d
 https://t.me/proxy?server=sr3.loveproxy.xyz&port=443&secret=ee80c85fd744ac529b79af0e72157d90c162726f777365722e79616e6465782e636f6d
 https://t.me/proxy?server=subobdoa.co.uk.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d
