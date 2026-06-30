@@ -13,7 +13,6 @@ https://t.me/proxy?server=49.12.79.244&port=443&secret=dd104462821249bd7ac519130
 https://t.me/proxy?server=51.75.168.149&port=8443&secret=104462821249bd7ac519130220c25d09
 https://t.me/proxy?server=68.209.57.138&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=89.167.109.120&port=443&secret=dd104462821249bd7ac519130220c25d09
-https://t.me/proxy?server=B10.Fire.dynu.com&port=8080&secret=00000000000000000000000000000000
 https://t.me/proxy?server=Best.for.iran.zydgjdinc.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e69626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=Best.for.iran.zydgjdinc.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d
 https://t.me/proxy?server=Best.for.iran.zydgjdinc.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e697374617469632e666172616b61762e636f6d
@@ -21,11 +20,8 @@ https://t.me/proxy?server=For.dear-iranian-people.com.heazshddd.info.&port=88&se
 https://t.me/proxy?server=Gard10.KingPoroxy.dynu.com&port=8080&secret=00000000000000000000000000000000
 https://t.me/proxy?server=Iran.mother.ir.jetish.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d
 https://t.me/proxy?server=Just-iraninan.com.the-nice-mtproto.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d
-https://t.me/proxy?server=MicRo110.KingPoroxy.dynu.com&port=8080&secret=00000000000000000000000000000000
 https://t.me/proxy?server=MicRo120.KingPoroxy.dynu.com&port=8080&secret=00000000000000000000000000000000
-https://t.me/proxy?server=MicRo90.KingPoroxy.dynu.com&port=8080&secret=00000000000000000000000000000000
 https://t.me/proxy?server=Together-for-iran.jetish.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d
-https://t.me/proxy?server=War55.KingPoroxy.dynu.com&port=8080&secret=00000000000000000000000000000000
 https://t.me/proxy?server=War77.KingPoroxy.dynu.com&port=8080&secret=00000000000000000000000000000000
 https://t.me/proxy?server=Yo.Fire.dynu.com&port=8080&secret=00000000000000000000000000000000
 https://t.me/proxy?server=aghaye.aseman.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
@@ -88,7 +84,6 @@ https://t.me/proxy?server=sv2.hajhossein.observer&port=443&secret=ee160301020001
 https://t.me/proxy?server=sv3.hajhossein.observer&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=sv4.hajhossein.observer&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=sv5.hajhossein.observer&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
-https://t.me/proxy?server=tabibie.del.davazdah.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=tanzibjf.club.&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=worldcup.avacloud.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=www.tproxy.monster&port=2053&secret=ee104462821249bd7ac519130220c25d09617669746f2e7275
