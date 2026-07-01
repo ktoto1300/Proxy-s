@@ -17,7 +17,6 @@ https://t.me/proxy?server=65.109.30.135&port=8443&secret=dd104462821249bd7ac5191
 https://t.me/proxy?server=65.109.30.137&port=8443&secret=dd104462821249bd7ac519130220c25d09
 https://t.me/proxy?server=68.209.57.138&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=78.47.67.183&port=443&secret=dd104462821249bd7ac519130220c25d09
-https://t.me/proxy?server=79.175.149.108&port=911&secret=dd90e6f16c044a7ab945293b4b4d252444
 https://t.me/proxy?server=89.167.109.120&port=443&secret=dd104462821249bd7ac519130220c25d09
 https://t.me/proxy?server=B10.Fire.dynu.com&port=8080&secret=00000000000000000000000000000000
 https://t.me/proxy?server=Best.for.iran.zydgjdinc.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e69626973636f7474692e79656b74616e65742e636f6d
@@ -87,6 +86,7 @@ https://t.me/proxy?server=sal.mahanam.info&port=443&secret=ee1603010200010001fc0
 https://t.me/proxy?server=secure.gorbushkin.click&port=443&secret=eee90419f865de23f95a859171396bc3d47365637572652e676f72627573686b696e2e636c69636b
 https://t.me/proxy?server=secure.medhata.org&port=443&secret=eea19617d5c2e4a7ea104cd317777acd1b7365637572652e6d6564686174612e6f7267
 https://t.me/proxy?server=signin-signout-manager.davazdah.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
+https://t.me/proxy?server=so-cpu.co.uk.&port=443&secret=ddf0eeb0bd9adc4fd4a93994ee3b2a216b
 https://t.me/proxy?server=subobdoa.co.uk.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d
 https://t.me/proxy?server=sv.hajhossein.observer&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=sv2.hajhossein.observer&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
