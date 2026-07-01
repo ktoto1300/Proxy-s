@@ -11,6 +11,7 @@ https://t.me/proxy?server=23.128.248.150&port=3128&secret=ddc5d1717f50bdab002e1b
 https://t.me/proxy?server=23.229.66.163&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=65.109.30.135&port=8443&secret=dd104462821249bd7ac519130220c25d09
 https://t.me/proxy?server=65.109.30.137&port=8443&secret=dd104462821249bd7ac519130220c25d09
+https://t.me/proxy?server=66a33889.etherealvpn.uk&port=443&secret=eed083bcb9b8a3592fa7d6e8060b95992d39643530393933642e657468657265616c76706e2e756b
 https://t.me/proxy?server=89.167.109.120&port=443&secret=dd104462821249bd7ac519130220c25d09
 https://t.me/proxy?server=Amir-ghalenoei-gq.ir.yfdhjderkig.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d
 https://t.me/proxy?server=B10.Fire.dynu.com&port=8080&secret=00000000000000000000000000000000
@@ -43,6 +44,7 @@ https://t.me/proxy?server=chat.avacloud.info&port=443&secret=ee1603010200010001f
 https://t.me/proxy?server=cloud.neoqua.pro&port=443&secret=ee4c40bfc1c32022e21d85e597be8652f7636c6f75642e6e656f7175612e70726f
 https://t.me/proxy?server=cloud.neoqua.pro&port=443&secret=ee7a5a372eecfa1dbada9b42e7d5cd5521636c6f75642e6e656f7175612e70726f
 https://t.me/proxy?server=company.avacloud.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
+https://t.me/proxy?server=dena-plus-auto.denatara.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=developer.davazdah.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=edge.rknwatch.digital&port=443&secret=ee1f46fcc7e9b3991677f71d2c1cb2ac92656467652e726b6e77617463682e6469676974616c
 https://t.me/proxy?server=fast.garden-troll.life&port=443&secret=ee42859b29c8b90b4c2002356811271472666173742e67617264656e2d74726f6c6c2e6c696665
