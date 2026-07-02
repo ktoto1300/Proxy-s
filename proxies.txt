@@ -12,7 +12,6 @@ https://t.me/proxy?server=23.229.66.163&port=443&secret=ee1603010200010001fc0303
 https://t.me/proxy?server=65.109.30.135&port=8443&secret=dd104462821249bd7ac519130220c25d09
 https://t.me/proxy?server=65.109.30.137&port=8443&secret=dd104462821249bd7ac519130220c25d09
 https://t.me/proxy?server=68.209.57.138&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
-https://t.me/proxy?server=87.120.108.94&port=443&secret=c40ebb0c21fe41fb96581bf994247f40
 https://t.me/proxy?server=89.167.109.120&port=443&secret=dd104462821249bd7ac519130220c25d09
 https://t.me/proxy?server=B10.Fire.dynu.com&port=8080&secret=00000000000000000000000000000000
 https://t.me/proxy?server=For.dear-iranian-people.com.heazshddd.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d
@@ -26,6 +25,8 @@ https://t.me/proxy?server=Together-for-iran.jetish.info.&port=88&secret=ee0000f0
 https://t.me/proxy?server=War55.KingPoroxy.dynu.com&port=8080&secret=00000000000000000000000000000000
 https://t.me/proxy?server=War77.KingPoroxy.dynu.com&port=8080&secret=00000000000000000000000000000000
 https://t.me/proxy?server=Yo.Fire.dynu.com&port=8080&secret=00000000000000000000000000000000
+https://t.me/proxy?server=ad1.arixo.shop&port=443&secret=eee09f46368021f91b92ad3dea14c7ac896164312e617269786f2e73686f70
+https://t.me/proxy?server=ad3.arixo.shop&port=443&secret=ee722fba8d97b9027b5fc4deb041b290cb6164332e617269786f2e73686f70
 https://t.me/proxy?server=aghaye.aseman.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=alpha&port=443&secret=ee66c007a679e4bac563190b5525d9a528616c7068615f666b3335786b6c6b736c5f73666b6c736f6d6567615f63686a61726c5f7177696e756b6b75732e70726f70726f786965732e746f70
 https://t.me/proxy?server=app.kvakzon.top&port=443&secret=ee9d85d8bad19d66608e316c7300eed0676170702e6b76616b7a6f6e2e746f70
@@ -72,6 +73,7 @@ https://t.me/proxy?server=rudomain.info.&port=443&secret=eef0eeb0bd9adc4fd4a9399
 https://t.me/proxy?server=s01.neo-trading.org&port=443&secret=ee7391242569590e01416101927d38b565646e732d73686f702e7275
 https://t.me/proxy?server=s02.neo-trading.org&port=443&secret=ee6ec9f7e082baf2397b450727ce78447e6f7a6f6e2e7275
 https://t.me/proxy?server=s03.neo-trading.org&port=443&secret=eee4bdd862b817da34a7bae5a15d71bd93766b2e636f6d
+https://t.me/proxy?server=sabon.tashkilat.info&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d
 https://t.me/proxy?server=secure.medhata.org&port=443&secret=ee424a5d237af49be4515bb005582791217365637572652e6d6564686174612e6f7267
 https://t.me/proxy?server=signin-signout-manager.davazdah.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=stars.tg-proxy.fun&port=6443&secret=a545c35eb2bdfa1a93df5ebe69957120
