@@ -6,7 +6,6 @@ https://t.me/proxy?server=144.225.243.13&port=4515&secret=eee9a4f23b1d768c04a8d7
 https://t.me/proxy?server=144.225.243.24&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=158.220.94.74&port=443&secret=ee4e7e3c97c9fc442cacb935955277ba29676f6f676c65617069732e636f6d
 https://t.me/proxy?server=167.235.249.231&port=443&secret=dd104462821249bd7ac519130220c25d09
-https://t.me/proxy?server=194.233.79.52&port=443&secret=eeae4238427921aba7b1fcb407e1f37ce1676f6f676c65617069732e636f6d
 https://t.me/proxy?server=194.233.82.137&port=443&secret=ee853310ac258556e04970d42f4d2c0023676f6f676c65617069732e636f6d
 https://t.me/proxy?server=207pana.denatara.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=23.128.248.150&port=3128&secret=ddc5d1717f50bdab002e1ba52d9ed8f2fe
