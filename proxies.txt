@@ -17,7 +17,6 @@ https://t.me/proxy?server=62.146.175.135&port=443&secret=eebaa6b35ab8606a4f45f40
 https://t.me/proxy?server=62.146.175.143&port=443&secret=ee71db63e1684957c9c39e3723c5980c53676f6f676c65617069732e636f6d
 https://t.me/proxy?server=66.94.107.23&port=443&secret=eecfcd09956992b6d4dd0bf6aa2a8f63cd676f6f676c65617069732e636f6d
 https://t.me/proxy?server=66.94.112.235&port=443&secret=ee4e7e3c97c9fc442cacb935955277ba29676f6f676c65617069732e636f6d
-https://t.me/proxy?server=79.175.149.121&port=443&secret=dd38a6dbaadc4df74bd3f977d6ade0bbc5
 https://t.me/proxy?server=87.229.56.6&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=87.229.56.7&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=87.229.56.8&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
@@ -86,7 +85,7 @@ https://t.me/proxy?server=power.nolags.pw&port=443&secret=ddc44116b4d7fbd81392e8
 https://t.me/proxy?server=proxy.garden-troll.life&port=443&secret=eee9b3ba71e9986a0601aaf9d8ec29b57c70726f78792e67617264656e2d74726f6c6c2e6c696665
 https://t.me/proxy?server=response.aseman.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=rudomain.info.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d
-https://t.me/proxy?server=s03.neo-trading.org&port=443&secret=eee4bdd862b817da34a7bae5a15d71bd93766b2e636f6d
+https://t.me/proxy?server=s03.neo-trading.org&port=443&secret=eeaf794bcc20f70b1436b6b92b01b207e26d61676e69742e7275
 https://t.me/proxy?server=secure.gorbushkin.click&port=443&secret=eeb45561860b2de5d002ab0a9a23481b2c7365637572652e676f72627573686b696e2e636c69636b
 https://t.me/proxy?server=sherkat.noavaran.novin.gostare.kosha.tashkilat.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=shir.dokhtar.hedoit.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
