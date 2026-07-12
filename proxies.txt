@@ -1,6 +1,7 @@
 https://t.me/proxy?server=0424d30b.koshkaproxy.shop&port=443&secret=ee1e355000114cdb95628c1564225a404b36326334346231662e6b6f73686b6170726f78792e73686f70
 https://t.me/proxy?server=0e8a5864.koshkaproxy.shop&port=443&secret=ee1e355000114cdb95628c1564225a404b36326334346231662e6b6f73686b6170726f78792e73686f70
 https://t.me/proxy?server=0m55m21111.ir.ir.ir.meli-n12.info&port=8443&secret=dd104462821249bd7ac519130220c25d09
+https://t.me/proxy?server=116.203.140.198&port=8443&secret=dd104462821249bd7ac519130220c25d09
 https://t.me/proxy?server=116611.ir.ir.ir.meli-n12.info&port=8443&secret=dd104462821249bd7ac519130220c25d09
 https://t.me/proxy?server=144.225.243.13&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=144.225.243.24&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d
@@ -17,6 +18,7 @@ https://t.me/proxy?server=87.229.56.8&port=443&secret=ee1603010200010001fc030386
 https://t.me/proxy?server=87.248.129.16&port=8443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=87.248.129.47&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 https://t.me/proxy?server=87.248.129.49&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
+https://t.me/proxy?server=88.99.175.27&port=8443&secret=dd104462821249bd7ac519130220c25d09
 https://t.me/proxy?server=B10.Fire.dynu.com&port=8080&secret=00000000000000000000000000000000
 https://t.me/proxy?server=For.dear-iranian-people.com.heazshddd.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d
 https://t.me/proxy?server=Gard10.KingPoroxy.dynu.com&port=8080&secret=00000000000000000000000000000000
@@ -48,6 +50,7 @@ https://t.me/proxy?server=chat.avacloud.info&port=443&secret=ee1603010200010001f
 https://t.me/proxy?server=chelipa.co.uk.&port=443&secret=ddf0eeb0bd9adc4fd4a93994ee3b2a216b
 https://t.me/proxy?server=connect.savelyev.click&port=443&secret=ee963bdbd49ba8d5207caa95a6cafe3a00636f6e6e6563742e736176656c7965762e636c69636b
 https://t.me/proxy?server=cross-over.lamari.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
+https://t.me/proxy?server=dullaa55332222.ir.meli-n13.info&port=8443&secret=104462821249bd7ac519130220c25d09
 https://t.me/proxy?server=ethereal5.arixo.shop&port=443&secret=ee60e9cad19900bfefdbd122d82dfcd3d9657468657265616c352e617269786f2e73686f70
 https://t.me/proxy?server=fas8t.co.uk.&port=443&secret=ddf0eeb0bd9adc4fd4a93994ee3b2a216b
 https://t.me/proxy?server=football.world-pro.co.uk&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
