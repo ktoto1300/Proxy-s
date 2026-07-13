@@ -23,7 +23,6 @@ https://t.me/proxy?server=PAyDaR.goooalir.co.uk&port=8443&secret=dd104462821249b
 https://t.me/proxy?server=War55.KingPoroxy.dynu.com&port=8080&secret=00000000000000000000000000000000
 https://t.me/proxy?server=War77.KingPoroxy.dynu.com&port=8080&secret=00000000000000000000000000000000
 https://t.me/proxy?server=Yo.Fire.dynu.com&port=8080&secret=00000000000000000000000000000000
-https://t.me/proxy?server=ad5.arixo.shop&port=443&secret=ee995469d4d5a3221f69a1cc24d1cafa506164322e617269786f2e73686f70
 https://t.me/proxy?server=api.gorbushkin.click&port=443&secret=ee7f4cdb81adf40f18239ce6ce52e53ce36170692e676f72627573686b696e2e636c69636b
 https://t.me/proxy?server=api.groundfloorsolutions.co.uk.&port=443&secret=eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169
 https://t.me/proxy?server=best-sellerst.co.uk.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d
@@ -70,7 +69,6 @@ https://t.me/proxy?server=rr7dhoo88001m1.ir.ir.ir.meli-n12.info&port=8443&secret
 https://t.me/proxy?server=rrfhoo88001m1.ir.ir.ir.meli-n12.info&port=8443&secret=dd104462821249bd7ac519130220c25d09
 https://t.me/proxy?server=rudomain.info.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d
 https://t.me/proxy?server=s01.neo-trading.org&port=443&secret=ee7391242569590e01416101927d38b565646e732d73686f702e7275
-https://t.me/proxy?server=s4.postpulse.space&port=443&secret=ee4ed06711abba996600b11cd356a7674c6164312e617269786f2e73686f70
 https://t.me/proxy?server=sal.mahanam.info&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d
 https://t.me/proxy?server=secure.gorbushkin.click&port=443&secret=ee02b0fe7d8336b262ae74889c88fc4f1c7365637572652e676f72627573686b696e2e636c69636b
 https://t.me/proxy?server=subobdoa.co.uk.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d
