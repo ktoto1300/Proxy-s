@@ -19,13 +19,10 @@ https://t.me/proxy?server=cdn.savelyev.click&port=443&secret=eefcacf4447d2bd244c
 https://t.me/proxy?server=cdn3.neo-trading.org&port=443&secret=eebddd26d28f5c8fd5fb3c1c5d1a57738e706574726f766963682e7275
 https://t.me/proxy?server=cdn5.neo-trading.org&port=443&secret=eee90a78bc2f09b9ae56119674c98ac213706574726f766963682e7275
 https://t.me/proxy?server=cdn6.neo-trading.org&port=443&secret=ee89d457f8cdb57f070701caf13a995b8a706574726f766963682e7275
-https://t.me/proxy?server=connect.savelyev.click&port=443&secret=ee963bdbd49ba8d5207caa95a6cafe3a00636f6e6e6563742e736176656c7965762e636c69636b
 https://t.me/proxy?server=fas8t.co.uk.&port=443&secret=ddf0eeb0bd9adc4fd4a93994ee3b2a216b
 https://t.me/proxy?server=fresh.t-proxy.info.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d
-https://t.me/proxy?server=go.antitspu.com&port=443&secret=eedec8518ddb0fd2fb190d6e8ede49e581676f2e616e7469747370752e636f6d
 https://t.me/proxy?server=googel.alo-otp.info.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d
 https://t.me/proxy?server=iro.3utilities.com&port=443&secret=fb175d6d7f820cdc73ab11edbdcdbd74
-https://t.me/proxy?server=login.veltura.digital&port=443&secret=ee381874396c547235c4be1e40cb6132976c6f67696e2e76656c747572612e6469676974616c
 https://t.me/proxy?server=mash.drproxy.pro&port=443&secret=dda5a7b5711e648c7bd534e4e87de2241b
 https://t.me/proxy?server=mc-ssh.t-proxyru.info.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d
 https://t.me/proxy?server=melat.managep.info&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d
