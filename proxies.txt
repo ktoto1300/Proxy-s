@@ -2,7 +2,6 @@ https://t.me/proxy?server=23.128.248.150&port=3128&secret=ddc5d1717f50bdab002e1b
 https://t.me/proxy?server=34.155.208.53&port=443&secret=dd2e1690137bb26b69718db2b71bb5ae8a
 https://t.me/proxy?server=35.204.159.194&port=443&secret=dd9cea7850eb43fd1838c435737914ec29
 https://t.me/proxy?server=87.229.56.6&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
-https://t.me/proxy?server=B10.Fire.dynu.com&port=8080&secret=00000000000000000000000000000000
 https://t.me/proxy?server=Gard10.KingPoroxy.dynu.com&port=8080&secret=00000000000000000000000000000000
 https://t.me/proxy?server=Lashboy.muzanesghy.co.uk&port=4455&secret=dd104462821249bd7ac519130220c25d09
 https://t.me/proxy?server=War77.KingPoroxy.dynu.com&port=8080&secret=00000000000000000000000000000000
